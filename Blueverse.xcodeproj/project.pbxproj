@@ -17,6 +17,14 @@
 		7171E2D92BEE27C300374FF3 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171E2D82BEE27C300374FF3 /* UserRouter.swift */; };
 		7171E2DB2BEE27D600374FF3 /* MachineRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171E2DA2BEE27D600374FF3 /* MachineRouter.swift */; };
 		7171E2DD2BEE298500374FF3 /* FoxAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171E2DC2BEE298500374FF3 /* FoxAPIClient.swift */; };
+		71DE30BB2BEE56E6004D9168 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE30B02BEE56E6004D9168 /* SectionModel.swift */; };
+		71DE30BC2BEE56E6004D9168 /* ViewMachineBalanceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE30B12BEE56E6004D9168 /* ViewMachineBalanceListViewModel.swift */; };
+		71DE30BD2BEE56E6004D9168 /* ViewMachineBalanceCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE30B32BEE56E6004D9168 /* ViewMachineBalanceCellModel.swift */; };
+		71DE30BE2BEE56E6004D9168 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DE30B42BEE56E6004D9168 /* Wallet.storyboard */; };
+		71DE30BF2BEE56E6004D9168 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE30B62BEE56E6004D9168 /* WalletViewController.swift */; };
+		71DE30C02BEE56E6004D9168 /* ViewMachineBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE30B72BEE56E6004D9168 /* ViewMachineBalanceController.swift */; };
+		71DE30C12BEE56E6004D9168 /* ViewMachineBalanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DE30B92BEE56E6004D9168 /* ViewMachineBalanceCell.xib */; };
+		71DE30C22BEE56E6004D9168 /* ViewMachineBalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE30BA2BEE56E6004D9168 /* ViewMachineBalanceCell.swift */; };
 		8021132229D81CFF0061E89A /* UIViewController+Biometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021132129D81CFF0061E89A /* UIViewController+Biometric.swift */; };
 		8021132529D81D2F0061E89A /* BiometricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021132429D81D2F0061E89A /* BiometricManager.swift */; };
 		804714EF29D8089F00B0E30F /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804714EE29D8089F00B0E30F /* String+Helper.swift */; };
@@ -112,6 +120,14 @@
 		7171E2D82BEE27C300374FF3 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		7171E2DA2BEE27D600374FF3 /* MachineRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineRouter.swift; sourceTree = "<group>"; };
 		7171E2DC2BEE298500374FF3 /* FoxAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxAPIClient.swift; sourceTree = "<group>"; };
+		71DE30B02BEE56E6004D9168 /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		71DE30B12BEE56E6004D9168 /* ViewMachineBalanceListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMachineBalanceListViewModel.swift; sourceTree = "<group>"; };
+		71DE30B32BEE56E6004D9168 /* ViewMachineBalanceCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMachineBalanceCellModel.swift; sourceTree = "<group>"; };
+		71DE30B42BEE56E6004D9168 /* Wallet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
+		71DE30B62BEE56E6004D9168 /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		71DE30B72BEE56E6004D9168 /* ViewMachineBalanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMachineBalanceController.swift; sourceTree = "<group>"; };
+		71DE30B92BEE56E6004D9168 /* ViewMachineBalanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewMachineBalanceCell.xib; sourceTree = "<group>"; };
+		71DE30BA2BEE56E6004D9168 /* ViewMachineBalanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMachineBalanceCell.swift; sourceTree = "<group>"; };
 		8021132129D81CFF0061E89A /* UIViewController+Biometric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Biometric.swift"; sourceTree = "<group>"; };
 		8021132429D81D2F0061E89A /* BiometricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricManager.swift; sourceTree = "<group>"; };
 		804714EE29D8089F00B0E30F /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
@@ -247,6 +263,70 @@
 				7171E2CE2BEE266000374FF3 /* Machine.swift */,
 			);
 			path = Machine;
+			sourceTree = "<group>";
+		};
+		71DE30AC2BEE565B004D9168 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				71DE30AD2BEE5664004D9168 /* Modules */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		71DE30AD2BEE5664004D9168 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				71DE30AE2BEE56E6004D9168 /* Wallet */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		71DE30AE2BEE56E6004D9168 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				71DE30AF2BEE56E6004D9168 /* ViewModels */,
+				71DE30B22BEE56E6004D9168 /* CellModels */,
+				71DE30B42BEE56E6004D9168 /* Wallet.storyboard */,
+				71DE30B52BEE56E6004D9168 /* Controllers */,
+				71DE30B82BEE56E6004D9168 /* Views */,
+			);
+			name = Wallet;
+			path = ../../../../../../NewProject/NewsApp/NewsApp/Code/UI/Modules/Wallet;
+			sourceTree = "<group>";
+		};
+		71DE30AF2BEE56E6004D9168 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				71DE30B02BEE56E6004D9168 /* SectionModel.swift */,
+				71DE30B12BEE56E6004D9168 /* ViewMachineBalanceListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		71DE30B22BEE56E6004D9168 /* CellModels */ = {
+			isa = PBXGroup;
+			children = (
+				71DE30B32BEE56E6004D9168 /* ViewMachineBalanceCellModel.swift */,
+			);
+			path = CellModels;
+			sourceTree = "<group>";
+		};
+		71DE30B52BEE56E6004D9168 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				71DE30B62BEE56E6004D9168 /* WalletViewController.swift */,
+				71DE30B72BEE56E6004D9168 /* ViewMachineBalanceController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		71DE30B82BEE56E6004D9168 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71DE30B92BEE56E6004D9168 /* ViewMachineBalanceCell.xib */,
+				71DE30BA2BEE56E6004D9168 /* ViewMachineBalanceCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8021132329D81D1C0061E89A /* Biometric */ = {
@@ -392,6 +472,7 @@
 		E33D6E1921BFC21D00A3A174 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				71DE30AC2BEE565B004D9168 /* UI */,
 				E33D6E1A21BFC21D00A3A174 /* Constants.swift */,
 				E33D6E1B21BFC21D00A3A174 /* ViewController.swift */,
 				E33D6E1D21BFC21D00A3A174 /* AppDelegate.swift */,
@@ -646,8 +727,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E33D6E3521BFC21D00A3A174 /* LaunchScreen.storyboard in Resources */,
+				71DE30BE2BEE56E6004D9168 /* Wallet.storyboard in Resources */,
 				E33D6E3421BFC21D00A3A174 /* Assets.xcassets in Resources */,
 				E33D6E3621BFC21D00A3A174 /* Main.storyboard in Resources */,
+				71DE30C12BEE56E6004D9168 /* ViewMachineBalanceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,13 +831,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				804714F829D80F3000B0E30F /* OTPView.swift in Sources */,
+				71DE30BD2BEE56E6004D9168 /* ViewMachineBalanceCellModel.swift in Sources */,
 				E33D6E4721BFC21D00A3A174 /* Colors.swift in Sources */,
+				71DE30C02BEE56E6004D9168 /* ViewMachineBalanceController.swift in Sources */,
+				71DE30C22BEE56E6004D9168 /* ViewMachineBalanceCell.swift in Sources */,
 				E33D6E3921BFC21D00A3A174 /* Storyboards.swift in Sources */,
 				E33D6E3D21BFC21D00A3A174 /* UIReusability.swift in Sources */,
 				E33D6E3821BFC21D00A3A174 /* ViewController.swift in Sources */,
 				8088676229D82389007C3CC8 /* Date+Helper.swift in Sources */,
 				E33D6E5A21BFC49600A3A174 /* TableViewCell.swift in Sources */,
 				E33D6E0C21BFC08900A3A174 /* Logging.swift in Sources */,
+				71DE30BF2BEE56E6004D9168 /* WalletViewController.swift in Sources */,
 				8021132529D81D2F0061E89A /* BiometricManager.swift in Sources */,
 				E33D6E4921BFC21D00A3A174 /* Configuration.swift in Sources */,
 				8088675E29D822C6007C3CC8 /* LocalNotificationManager.swift in Sources */,
@@ -766,6 +853,7 @@
 				E33D6E5B21BFC49600A3A174 /* CollectionViewCell.swift in Sources */,
 				E33D6E4621BFC21D00A3A174 /* Fonts.swift in Sources */,
 				804714F929D80F3000B0E30F /* OTPTextField.swift in Sources */,
+				71DE30BB2BEE56E6004D9168 /* SectionModel.swift in Sources */,
 				E33D6E4821BFC21D00A3A174 /* NavigationItem.swift in Sources */,
 				E33D6E3F21BFC21D00A3A174 /* UITextField+Helper.swift in Sources */,
 				E33D6E3C21BFC21D00A3A174 /* NavigationBar.swift in Sources */,
@@ -778,6 +866,7 @@
 				E33D6E3721BFC21D00A3A174 /* Constants.swift in Sources */,
 				8088676029D822E2007C3CC8 /* LocalNotificationType.swift in Sources */,
 				E33D6E3E21BFC21D00A3A174 /* UITableViewCell+Helper.swift in Sources */,
+				71DE30BC2BEE56E6004D9168 /* ViewMachineBalanceListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
