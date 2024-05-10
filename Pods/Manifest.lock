@@ -1,0 +1,100 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AnyErrorKit (0.1.4)
+  - AppCenter (5.0.4):
+    - AppCenter/Analytics (= 5.0.4)
+    - AppCenter/Crashes (= 5.0.4)
+  - AppCenter/Analytics (5.0.4):
+    - AppCenter/Core
+  - AppCenter/Core (5.0.4)
+  - AppCenter/Crashes (5.0.4):
+    - AppCenter/Core
+  - FLLogs (0.1.2):
+    - XCGLogger (~> 7.0.0)
+  - FLUtilities (0.1.0)
+  - FoxAPIKit (0.2.0):
+    - Alamofire (~> 4.7)
+    - AnyErrorKit (~> 0.1.4)
+    - JSONParsing (~> 0.2.0)
+    - SwiftyJSON (~> 4.0)
+  - JSONParsing (0.2.1):
+    - AnyErrorKit (~> 0.1.1)
+    - SwiftyJSON (~> 4.0)
+  - Kingfisher (7.11.0)
+  - MBProgressHUD (1.2.0)
+  - ObjcExceptionBridging (7.1.5):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 7.1.5)
+  - ObjcExceptionBridging/ObjcExceptionBridging (7.1.5)
+  - SwiftLint (0.54.0)
+  - SwiftyJSON (4.3.0)
+  - XCGLogger (7.0.1):
+    - XCGLogger/Core (= 7.0.1)
+  - XCGLogger/Core (7.0.1):
+    - ObjcExceptionBridging
+
+DEPENDENCIES:
+  - AnyErrorKit (from `https://github.com/Nickelfox/AnyErrorKit.git`)
+  - AppCenter
+  - FLLogs (from `https://github.com/Nickelfox/FLLogs.git`, branch `develop`)
+  - FLUtilities (from `https://github.com/Nickelfox/FLUtilities.git`)
+  - FoxAPIKit (from `https://github.com/Nickelfox/FoxAPIKit.git`, branch `develop`)
+  - Kingfisher
+  - MBProgressHUD
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AppCenter
+    - JSONParsing
+    - Kingfisher
+    - MBProgressHUD
+    - ObjcExceptionBridging
+    - SwiftLint
+    - SwiftyJSON
+    - XCGLogger
+
+EXTERNAL SOURCES:
+  AnyErrorKit:
+    :git: https://github.com/Nickelfox/AnyErrorKit.git
+  FLLogs:
+    :branch: develop
+    :git: https://github.com/Nickelfox/FLLogs.git
+  FLUtilities:
+    :git: https://github.com/Nickelfox/FLUtilities.git
+  FoxAPIKit:
+    :branch: develop
+    :git: https://github.com/Nickelfox/FoxAPIKit.git
+
+CHECKOUT OPTIONS:
+  AnyErrorKit:
+    :commit: 8651c99e640860cf09b724222ac7c62c4c102afb
+    :git: https://github.com/Nickelfox/AnyErrorKit.git
+  FLLogs:
+    :commit: b4ac361af1e50970f9ee88a5fba8ee8e8496a99e
+    :git: https://github.com/Nickelfox/FLLogs.git
+  FLUtilities:
+    :commit: a16a0cba058a6f4e2fa62cfdcfd082394f67bd8d
+    :git: https://github.com/Nickelfox/FLUtilities.git
+  FoxAPIKit:
+    :commit: 7b599ee0d8ac8e0809a4a1209072e3dff2f1be2c
+    :git: https://github.com/Nickelfox/FoxAPIKit.git
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AnyErrorKit: ea76a71ded6c544d4d2ddbfe1e8befc67d39a407
+  AppCenter: 85c92db0759d2792a65eb61d6842d2e86611a49a
+  FLLogs: c9809fdf95d61fe45025202340b0c4a7c922f85d
+  FLUtilities: b61fc8f05e8b952f803b77b26ca11936502c923d
+  FoxAPIKit: 49a6aa35a6326dccdffab5df2f213c6c107cbd7e
+  JSONParsing: 042f0e156c69002af7092084f3b9822867270b3d
+  Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  ObjcExceptionBridging: d3d37d62981bb7f252ecb31b62d7e23a96bbfb8a
+  SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  XCGLogger: 1943831ef907df55108b0b18657953f868de973b
+
+PODFILE CHECKSUM: 2e787ffa770e4527383e6c7426d61612a6e8cbe1
+
+COCOAPODS: 1.15.2

@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "popover",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Nickelfox/Popover.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "1b0f1e02cfc43f4e139f663ff8f3d41fc9bc3d06"
+      }
+    },
+    {
+      "identity" : "reactivecocoa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveCocoa/ReactiveCocoa.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "1e7e5191445d65ee26aeacf583dcdb70bf49f70e"
+      }
+    },
+    {
+      "identity" : "reactiveswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+      "state" : {
+        "revision" : "40c465af19b993344e84355c00669ba2022ca3cd",
+        "version" : "7.1.1"
+      }
+    }
+  ],
+  "version" : 2
+}
