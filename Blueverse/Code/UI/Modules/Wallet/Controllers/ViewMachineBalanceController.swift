@@ -22,10 +22,12 @@ class ViewMachineBalanceListViewController: UIViewController {
     @IBOutlet weak var backArrowView: UIView!
     @IBOutlet weak var viewMachineBalanceHeaderView: UIView!
     @IBOutlet weak var backArrowIconImage: UIImageView!
-    
     @IBOutlet weak var machineBalanceNavView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewMachineBalanceText: UILabel!
+    
+    var navigationStack: [UIViewController] = []
+    
     
     var viewModel: ViewMachineBalanceListViewControllerProtocol!
     override func viewDidLoad() {
@@ -34,9 +36,24 @@ class ViewMachineBalanceListViewController: UIViewController {
         self.viewModel = ViewMachineBalanceListViewModel(view: self)
         self.registerTable()
         viewModel.fetchMachineTransactions()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backArrowTapped))
+        backArrowView.addGestureRecognizer(tapGesture)
 
     }
-    @IBAction
+    
+    @objc func backArrowTapped() {
+            navigateBack()
+        }
+        
+        // Function to navigate back
+        func navigateBack() {
+            guard let previousViewController = navigationStack.popLast() else {
+                // No previous view controller to navigate back to
+                return
+            }
+            navigationController?.popToViewController(previousViewController, animated: true)
+        }
     
     func registerTable() {
         self.tableView.delegate = self

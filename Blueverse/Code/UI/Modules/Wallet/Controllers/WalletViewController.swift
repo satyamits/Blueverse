@@ -27,7 +27,16 @@ class WalletViewController: UIViewController {
     @IBOutlet weak var manageWalletHeaderView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureUI()
     }
-
+    func configureUI() {
+        walletBalanceView.layer.cornerRadius = 12
+        walletBalanceView.layer.masksToBounds = true
+        walletbalanceIncGSTView.layer.cornerRadius = 10
+        blueVerseCreditView.layer.cornerRadius = 10
+        walletIconView.layer.cornerRadius = 5
+        creditIconView.layer.cornerRadius = 5
+        leftAlignIconView.layer.cornerRadius = 8
+        bellIconView.layer.cornerRadius = 8
+    }
 }
-
