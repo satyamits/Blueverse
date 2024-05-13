@@ -126,10 +126,42 @@
             filePath = "Blueverse/Code/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "setupObservers()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ACEE82B8-538C-4F8E-B966-2096C68BCC05 - 848d2fd9bb9b22ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Model.Machine) -&gt; () in Blueverse.ViewController.setupObservers() -&gt; ()"
+                  moduleName = "Blueverse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "ACEE82B8-538C-4F8E-B966-2096C68BCC05 - 848d2fd9bb9b3d4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Model.Machine) -&gt; () in Blueverse.ViewController.setupObservers() -&gt; ()"
+                  moduleName = "Blueverse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,10 +174,42 @@
             filePath = "Blueverse/Code/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "setupObservers()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9FEADDFA-17C5-4495-BB2B-1695D9D206F3 - e936fd145152c9bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Model.ModelError) -&gt; () in Blueverse.ViewController.setupObservers() -&gt; ()"
+                  moduleName = "Blueverse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "9FEADDFA-17C5-4495-BB2B-1695D9D206F3 - e936fd145152c998"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Model.ModelError) -&gt; () in Blueverse.ViewController.setupObservers() -&gt; ()"
+                  moduleName = "Blueverse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

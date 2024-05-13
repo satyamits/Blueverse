@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     let email = "vaibhaw.anand+1@nickelfox.com"
     let password = "Password@1"
     let app = "DEALER"
-    
     var disposable = CompositeDisposable([])
     
     override func viewDidLoad() {
@@ -38,4 +37,22 @@ class ViewController: UIViewController {
             print(error)
         })
     }
+    
+
+    
+//    func login(email: String, password: String, app: String, completion: @escaping (APIResult<User>) -> Void) {
+//        User.login(email: email, password: password, app: app) { apiResult in
+//            completion(apiResult)
+//        }
+//    }
+//        
+//    login(email: email, password: password, app: app) { result in
+//        switch result {
+//        case .success(let user):
+//            print("Token:", user.token)
+//        case .failure(let error):
+//            print("Error:", error)
+//        }
+//    }
+//    
 }
