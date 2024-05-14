@@ -29,7 +29,7 @@ public enum UserRouter: BaseRouter {
     }
     
     
-    public var params: [String : Any] {
+    public var params: [String: Any] {
         switch self {
         case .login(let email, let password, let app):
             return ["email": email,

@@ -25,6 +25,15 @@
 		7173F0522BF21D07008A404F /* ViewMachineBalanceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173F0512BF21D07008A404F /* ViewMachineBalanceListViewModel.swift */; };
 		7173F0542BF21D15008A404F /* ViewMachineBalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173F0532BF21D15008A404F /* ViewMachineBalanceCell.swift */; };
 		7173F0562BF21D20008A404F /* ViewMachineBalanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7173F0552BF21D20008A404F /* ViewMachineBalanceCell.xib */; };
+		71B829E92BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829E72BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift */; };
+		71B829EA2BF327EE00729579 /* TransactionsDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B829E82BF327EE00729579 /* TransactionsDetailCell.xib */; };
+		71B829EC2BF3329000729579 /* TransactionsDetailsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829EB2BF3329000729579 /* TransactionsDetailsCellModel.swift */; };
+		71B829EE2BF3341400729579 /* TransactionsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829ED2BF3341400729579 /* TransactionsDetailController.swift */; };
+		71B829F12BF3381B00729579 /* TransactionsDetailTableViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829EF2BF3381B00729579 /* TransactionsDetailTableViewListCell.swift */; };
+		71B829F22BF3381B00729579 /* TransactionsDetailTableViewListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B829F02BF3381B00729579 /* TransactionsDetailTableViewListCell.xib */; };
+		71B829F52BF34A1A00729579 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829F42BF34A1A00729579 /* RootViewController.swift */; };
+		71B829F72BF34A2800729579 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B829F62BF34A2800729579 /* Root.storyboard */; };
+		71B829FB2BF3850A00729579 /* TransactionsDetailListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829FA2BF3850A00729579 /* TransactionsDetailListViewModel.swift */; };
 		8021132229D81CFF0061E89A /* UIViewController+Biometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021132129D81CFF0061E89A /* UIViewController+Biometric.swift */; };
 		8021132529D81D2F0061E89A /* BiometricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021132429D81D2F0061E89A /* BiometricManager.swift */; };
 		804714EF29D8089F00B0E30F /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804714EE29D8089F00B0E30F /* String+Helper.swift */; };
@@ -128,6 +137,15 @@
 		7173F0512BF21D07008A404F /* ViewMachineBalanceListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMachineBalanceListViewModel.swift; sourceTree = "<group>"; };
 		7173F0532BF21D15008A404F /* ViewMachineBalanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMachineBalanceCell.swift; sourceTree = "<group>"; };
 		7173F0552BF21D20008A404F /* ViewMachineBalanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewMachineBalanceCell.xib; sourceTree = "<group>"; };
+		71B829E72BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		71B829E82BF327EE00729579 /* TransactionsDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsDetailCell.xib; sourceTree = "<group>"; };
+		71B829EB2BF3329000729579 /* TransactionsDetailsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailsCellModel.swift; sourceTree = "<group>"; };
+		71B829ED2BF3341400729579 /* TransactionsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailController.swift; sourceTree = "<group>"; };
+		71B829EF2BF3381B00729579 /* TransactionsDetailTableViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailTableViewListCell.swift; sourceTree = "<group>"; };
+		71B829F02BF3381B00729579 /* TransactionsDetailTableViewListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsDetailTableViewListCell.xib; sourceTree = "<group>"; };
+		71B829F42BF34A1A00729579 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		71B829F62BF34A2800729579 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		71B829FA2BF3850A00729579 /* TransactionsDetailListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailListViewModel.swift; sourceTree = "<group>"; };
 		8021132129D81CFF0061E89A /* UIViewController+Biometric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Biometric.swift"; sourceTree = "<group>"; };
 		8021132429D81D2F0061E89A /* BiometricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricManager.swift; sourceTree = "<group>"; };
 		804714EE29D8089F00B0E30F /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
@@ -281,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				7173F0492BF21CA1008A404F /* ViewMachineBalanceCellModel.swift */,
+				71B829EB2BF3329000729579 /* TransactionsDetailsCellModel.swift */,
 			);
 			path = CellModels;
 			sourceTree = "<group>";
@@ -290,6 +309,7 @@
 			children = (
 				7173F04D2BF21CEC008A404F /* WalletViewController.swift */,
 				7173F04B2BF21CE1008A404F /* ViewMachineBalanceController.swift */,
+				71B829ED2BF3341400729579 /* TransactionsDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,8 +317,8 @@
 		7173F0472BF21C72008A404F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				7173F0512BF21D07008A404F /* ViewMachineBalanceListViewModel.swift */,
-				7173F04F2BF21CFB008A404F /* SectionModel.swift */,
+				71B829F92BF384CF00729579 /* Transactions */,
+				71B829F82BF384B400729579 /* Machine Balance */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -308,8 +328,38 @@
 			children = (
 				7173F0532BF21D15008A404F /* ViewMachineBalanceCell.swift */,
 				7173F0552BF21D20008A404F /* ViewMachineBalanceCell.xib */,
+				71B829E72BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift */,
+				71B829E82BF327EE00729579 /* TransactionsDetailCell.xib */,
+				71B829EF2BF3381B00729579 /* TransactionsDetailTableViewListCell.swift */,
+				71B829F02BF3381B00729579 /* TransactionsDetailTableViewListCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		71B829F32BF3493D00729579 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				71B829F42BF34A1A00729579 /* RootViewController.swift */,
+				71B829F62BF34A2800729579 /* Root.storyboard */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		71B829F82BF384B400729579 /* Machine Balance */ = {
+			isa = PBXGroup;
+			children = (
+				7173F04F2BF21CFB008A404F /* SectionModel.swift */,
+				7173F0512BF21D07008A404F /* ViewMachineBalanceListViewModel.swift */,
+			);
+			path = "Machine Balance";
+			sourceTree = "<group>";
+		};
+		71B829F92BF384CF00729579 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				71B829FA2BF3850A00729579 /* TransactionsDetailListViewModel.swift */,
+			);
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 		71DE30AC2BEE565B004D9168 /* UI */ = {
@@ -323,6 +373,7 @@
 		71DE30AD2BEE5664004D9168 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				71B829F32BF3493D00729579 /* Root */,
 				7173F0412BF21BAE008A404F /* Wallet */,
 			);
 			path = Modules;
@@ -727,9 +778,12 @@
 			files = (
 				E33D6E3521BFC21D00A3A174 /* LaunchScreen.storyboard in Resources */,
 				7173F0432BF21BE4008A404F /* Wallet.storyboard in Resources */,
+				71B829F72BF34A2800729579 /* Root.storyboard in Resources */,
 				E33D6E3421BFC21D00A3A174 /* Assets.xcassets in Resources */,
+				71B829F22BF3381B00729579 /* TransactionsDetailTableViewListCell.xib in Resources */,
 				E33D6E3621BFC21D00A3A174 /* Main.storyboard in Resources */,
 				7173F0562BF21D20008A404F /* ViewMachineBalanceCell.xib in Resources */,
+				71B829EA2BF327EE00729579 /* TransactionsDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,20 +884,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				804714F829D80F3000B0E30F /* OTPView.swift in Sources */,
+				71B829E92BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift in Sources */,
 				E33D6E4721BFC21D00A3A174 /* Colors.swift in Sources */,
+				71B829EC2BF3329000729579 /* TransactionsDetailsCellModel.swift in Sources */,
 				E33D6E3921BFC21D00A3A174 /* Storyboards.swift in Sources */,
 				E33D6E3D21BFC21D00A3A174 /* UIReusability.swift in Sources */,
 				7173F0542BF21D15008A404F /* ViewMachineBalanceCell.swift in Sources */,
 				E33D6E3821BFC21D00A3A174 /* ViewController.swift in Sources */,
 				8088676229D82389007C3CC8 /* Date+Helper.swift in Sources */,
 				E33D6E5A21BFC49600A3A174 /* TableViewCell.swift in Sources */,
+				71B829FB2BF3850A00729579 /* TransactionsDetailListViewModel.swift in Sources */,
 				E33D6E0C21BFC08900A3A174 /* Logging.swift in Sources */,
 				8021132529D81D2F0061E89A /* BiometricManager.swift in Sources */,
+				71B829F12BF3381B00729579 /* TransactionsDetailTableViewListCell.swift in Sources */,
 				7173F04C2BF21CE1008A404F /* ViewMachineBalanceController.swift in Sources */,
 				7173F04A2BF21CA1008A404F /* ViewMachineBalanceCellModel.swift in Sources */,
 				E33D6E4921BFC21D00A3A174 /* Configuration.swift in Sources */,
 				8088675E29D822C6007C3CC8 /* LocalNotificationManager.swift in Sources */,
 				7173F04E2BF21CEC008A404F /* WalletViewController.swift in Sources */,
+				71B829EE2BF3341400729579 /* TransactionsDetailController.swift in Sources */,
 				E33D6E5321BFC47900A3A174 /* ImageView.swift in Sources */,
 				8021132229D81CFF0061E89A /* UIViewController+Biometric.swift in Sources */,
 				E33D6E3A21BFC21D00A3A174 /* AppDelegate.swift in Sources */,
@@ -863,6 +922,7 @@
 				804714FE29D8106A00B0E30F /* AppFont.swift in Sources */,
 				E33D6E3B21BFC21D00A3A174 /* UIViewController+Helper.swift in Sources */,
 				E33D6E3721BFC21D00A3A174 /* Constants.swift in Sources */,
+				71B829F52BF34A1A00729579 /* RootViewController.swift in Sources */,
 				8088676029D822E2007C3CC8 /* LocalNotificationType.swift in Sources */,
 				7173F0502BF21CFB008A404F /* SectionModel.swift in Sources */,
 				E33D6E3E21BFC21D00A3A174 /* UITableViewCell+Helper.swift in Sources */,

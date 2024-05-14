@@ -12,20 +12,19 @@ import ReactiveSwift
 
 extension Machine {
     
-        public static func fetchMachineResponse(id: String) -> SignalProducer<Machine, ModelError> {
-            return SignalProducer { (signal, _) in
-              let router = MachineRouter.fetchMachines(id: id)
-              FoxAPIClient.shared.request(router) { (result: APIResult<Machine>) in
+    public static func fetchMachineResponse(id: String) -> SignalProducer<Machine, ModelError> {
+        return SignalProducer { (signal, _) in
+            let router = MachineRouter.fetchMachines(id: id)
+            BlueverseAPIClient.shared.request(router) { (result: APIResult<Machine>) in
                 switch result {
                 case .success(let response):
-                  signal.send(value: response)
-                  signal.sendCompleted()
+                    signal.send(value: response)
+                    signal.sendCompleted()
                 case .failure(let error):
-                  signal.send(error: .customError(error: error))
-                    print(error.localizedDescription)
+                    signal.send(error: .customError(error: error))
                 }
-              }
             }
-          }
+        }
+    }
     
 }

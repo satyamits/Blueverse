@@ -10,11 +10,29 @@ import Foundation
 import FoxAPIKit
 import AnyErrorKit
 import JSONParsing
+import ReactiveSwift
 
 extension User {
     
-    static public func login(email: String, password: String, app: String, completion: @escaping (APIResult<User>) -> Void) {
-        let userRouter = UserRouter.login(email: email, password: password, app: app)
-        FoxAPIClient.shared.request(userRouter, completion: completion)
+    public static func login(_ email: String,
+                             _ password: String,
+                             _ app: String) -> SignalProducer<Bool, ModelError> {
+        return SignalProducer { (signal, _) in
+        
+            let router = UserRouter.login(email: email,
+                                          password: password,
+                                          app: app)
+            BlueverseAPIClient.shared.request(router) { (result: APIResult<User>) in
+                switch result {
+                case .success(let response):
+                    DataModel.shared.authToken = response.token
+                    DataModel.shared.userOnboarded = true
+                    signal.send(value: true)
+                    signal.sendCompleted()
+                case .failure(let error):
+                    signal.send(error: .customError(error: error))
+                }
+            }
+        }
     }
 }

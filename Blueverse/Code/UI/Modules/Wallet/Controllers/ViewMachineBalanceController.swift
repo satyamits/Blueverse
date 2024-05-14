@@ -43,17 +43,8 @@ class ViewMachineBalanceListViewController: UIViewController {
     }
     
     @objc func backArrowTapped() {
-            navigateBack()
-        }
-        
-        // Function to navigate back
-        func navigateBack() {
-            guard let previousViewController = navigationStack.popLast() else {
-                // No previous view controller to navigate back to
-                return
-            }
-            navigationController?.popToViewController(previousViewController, animated: true)
-        }
+        self.navigationController?.popViewController(animated: true)
+    }
     
     func registerTable() {
         self.tableView.delegate = self

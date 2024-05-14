@@ -307,56 +307,12 @@
             </connections>
             <point key="canvasLocation" x="162.59541984732823" y="13.732394366197184"/>
         </tableViewCell>
-        <viewController id="Rxl-NI-RWT">
-            <view key="view" opaque="NO" contentMode="scaleToFill" id="GcI-iO-Rhu">
-                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pY9-SO-QwT">
-                        <rect key="frame" x="20" y="195" width="360" height="465"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ks8-Dc-qVk">
-                                <rect key="frame" x="12" y="42" width="336" height="340"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD MONEY TO YOUR WALLET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGX-Xx-oUZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="336" height="17"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="NGX-Xx-oUZ" firstAttribute="top" secondItem="Ks8-Dc-qVk" secondAttribute="top" id="3ut-vZ-qBo"/>
-                                    <constraint firstItem="NGX-Xx-oUZ" firstAttribute="leading" secondItem="Ks8-Dc-qVk" secondAttribute="leading" id="NRM-5a-QCD"/>
-                                    <constraint firstAttribute="trailing" secondItem="NGX-Xx-oUZ" secondAttribute="trailing" id="oMg-Gq-D7e"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Ks8-Dc-qVk" secondAttribute="trailing" constant="12" id="TvZ-9n-JbW"/>
-                            <constraint firstItem="Ks8-Dc-qVk" firstAttribute="leading" secondItem="pY9-SO-QwT" secondAttribute="leading" constant="12" id="glQ-gr-9dM"/>
-                            <constraint firstItem="Ks8-Dc-qVk" firstAttribute="top" secondItem="pY9-SO-QwT" secondAttribute="top" constant="20" id="hhl-Ss-UiV"/>
-                        </constraints>
-                    </view>
-                </subviews>
-                <viewLayoutGuide key="safeArea" id="pXE-n5-6Ee"/>
-                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                <constraints>
-                    <constraint firstItem="pXE-n5-6Ee" firstAttribute="trailing" secondItem="pY9-SO-QwT" secondAttribute="trailing" constant="13" id="nYN-rD-f77"/>
-                    <constraint firstItem="pY9-SO-QwT" firstAttribute="leading" secondItem="pXE-n5-6Ee" secondAttribute="leading" constant="20" id="tYI-rN-Rg9"/>
-                    <constraint firstItem="pY9-SO-QwT" firstAttribute="top" secondItem="pXE-n5-6Ee" secondAttribute="top" constant="160" id="x5c-x8-BYM"/>
-                </constraints>
-            </view>
-            <point key="canvasLocation" x="875.57251908396938" y="-20.422535211267608"/>
-        </viewController>
     </objects>
     <resources>
         <image name="alert-circle" width="16" height="16"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -24,7 +24,7 @@ public enum MachineRouter: BaseRouter {
             return "/user/dealer/detail/\(id)"
         }
     }
-    public var params: [String : Any] {
+    public var params: [String: Any] {
         switch self {
         default: return [:]
         }
