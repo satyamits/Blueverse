@@ -11,7 +11,6 @@ import Model
 
 class TransactionsDetailsCellModel {
     
-    
     var transactionData: Machine
     init(transactionData: Machine) {
         self.transactionData = transactionData

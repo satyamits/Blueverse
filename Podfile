@@ -10,6 +10,7 @@ target 'Blueverse' do
     pod 'MBProgressHUD'
     pod 'SwiftLint'
     pod 'AppCenter'
+    pod 'JWTDecode', '~> 3.1'
 end
 
 target 'Model' do

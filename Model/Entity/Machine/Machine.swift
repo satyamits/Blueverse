@@ -37,25 +37,33 @@ public final class Machine: JSONParseable {
     public var machineGuid: String
     public var status: String
     public var isAssigned: Bool
+    public var walletBalance: Double
+    public var blueverseCredit: Double
     public var feedbackFormId: String?
     
     init(name: String,
          machineGuid: String,
          status: String,
          isAssigned: Bool,
-         feedbackFormId: String) {
+         feedbackFormId: String,
+         walletbalance: Double,
+         blueverseCredit: Double) {
         self.name = name
         self.machineGuid = machineGuid
         self.status = status
         self.isAssigned = isAssigned
         self.feedbackFormId = feedbackFormId
+        self.walletBalance = walletbalance
+        self.blueverseCredit = blueverseCredit
     }
     
     public static func parse(_ json: JSON) throws -> Machine {
-        return  Machine(name:  json["name"]^!,
-                        machineGuid:  json["machineGuid"]^!,
-                        status:  json["status"]^!,
-                        isAssigned:  json["isAssigned"]^!,
-                        feedbackFormId:  json["feedbackFormId"]^!)
+        return  Machine(name: json["name"]^!,
+                        machineGuid: json["machineGuid"]^!,
+                        status: json["status"]^!,
+                        isAssigned: json["isAssigned"]^!,
+                        feedbackFormId: json["feedbackFormId"]^!,
+                        walletbalance: json["walletBalance"]^!,
+                        blueverseCredit: json["blueverseCredit"]^!)
     }
 }

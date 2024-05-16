@@ -31,6 +31,8 @@ public enum MachineRouter: BaseRouter {
     }
     public var keypathToMap: String? {
         switch self {
+        case .fetchMachines:
+            return "data.outlets"
         default:
             return "data"
         }

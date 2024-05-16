@@ -13,7 +13,7 @@
         <!--Wallet View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="WalletViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WalletViewController" customModule="Blueverse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalletViewController" id="Y6W-OH-hqX" customClass="WalletViewController" customModule="Blueverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="WalletView">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -529,11 +529,11 @@ Credits Balance</string>
             <objects>
                 <viewController storyboardIdentifier="ViewMachineBalanceListViewController" id="cgq-o6-ehb" customClass="ViewMachineBalanceListViewController" customModule="Blueverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mRL-tz-aEf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLC-CJ-DKq">
-                                <rect key="frame" x="0.0" y="59" width="393" height="76"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mg-gK-vUm">
                                         <rect key="frame" x="20" y="18" width="353" height="40"/>
@@ -585,7 +585,7 @@ Credits Balance</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j5P-Xx-wmC">
-                                <rect key="frame" x="16" y="151" width="361" height="651"/>
+                                <rect key="frame" x="16" y="92" width="361" height="734"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -601,6 +601,7 @@ Credits Balance</string>
                             <constraint firstItem="j5P-Xx-wmC" firstAttribute="top" secondItem="vLC-CJ-DKq" secondAttribute="bottom" constant="16" id="qHo-N2-ewd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qaX-WD-68E"/>
                     <connections>
                         <outlet property="backArrowIconImage" destination="UIa-VD-S1G" id="RaY-hv-ueF"/>
                         <outlet property="backArrowView" destination="0fL-Wy-S15" id="Ke1-68-Xcd"/>
@@ -623,9 +624,6 @@ Credits Balance</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="NE8-qc-NFH"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bY-nb-OXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		23FAC33D4963E446D830AACA /* Pods_Blueverse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF244BFD639AF39D4D9FA008 /* Pods_Blueverse.framework */; };
 		2E254E5A2661B46D114A776C /* Pods_Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9691FCF1EB18DD738B70658 /* Pods_Model.framework */; };
+		71546FD42BF5E2250095D401 /* WalletHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71546FD32BF5E2250095D401 /* WalletHistory.swift */; };
+		71546FD62BF5E43C0095D401 /* WalletHistory+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71546FD52BF5E43C0095D401 /* WalletHistory+API.swift */; };
+		71546FD82BF5E4580095D401 /* WalletHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71546FD72BF5E4580095D401 /* WalletHistoryRouter.swift */; };
 		7171E2CF2BEE266000374FF3 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171E2CE2BEE266000374FF3 /* Machine.swift */; };
 		7171E2D12BEE266D00374FF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171E2D02BEE266D00374FF3 /* User.swift */; };
 		7171E2D32BEE268700374FF3 /* User+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171E2D22BEE268700374FF3 /* User+API.swift */; };
@@ -23,10 +26,10 @@
 		7173F04E2BF21CEC008A404F /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173F04D2BF21CEC008A404F /* WalletViewController.swift */; };
 		7173F0502BF21CFB008A404F /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173F04F2BF21CFB008A404F /* SectionModel.swift */; };
 		7173F0522BF21D07008A404F /* ViewMachineBalanceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173F0512BF21D07008A404F /* ViewMachineBalanceListViewModel.swift */; };
-		7173F0542BF21D15008A404F /* ViewMachineBalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173F0532BF21D15008A404F /* ViewMachineBalanceCell.swift */; };
-		7173F0562BF21D20008A404F /* ViewMachineBalanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7173F0552BF21D20008A404F /* ViewMachineBalanceCell.xib */; };
+		71865E292BF62EFB007BCCE0 /* ViewMachineBalanceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71865E272BF62EFB007BCCE0 /* ViewMachineBalanceListCell.swift */; };
+		71865E2A2BF62EFB007BCCE0 /* ViewMachineBalanceListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71865E282BF62EFB007BCCE0 /* ViewMachineBalanceListCell.xib */; };
 		71B829E92BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829E72BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift */; };
-		71B829EA2BF327EE00729579 /* TransactionsDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B829E82BF327EE00729579 /* TransactionsDetailCell.xib */; };
+		71B829EA2BF327EE00729579 /* TransactionsDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B829E82BF327EE00729579 /* TransactionsDetailCollectionViewCell.xib */; };
 		71B829EC2BF3329000729579 /* TransactionsDetailsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829EB2BF3329000729579 /* TransactionsDetailsCellModel.swift */; };
 		71B829EE2BF3341400729579 /* TransactionsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829ED2BF3341400729579 /* TransactionsDetailController.swift */; };
 		71B829F12BF3381B00729579 /* TransactionsDetailTableViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829EF2BF3381B00729579 /* TransactionsDetailTableViewListCell.swift */; };
@@ -34,6 +37,7 @@
 		71B829F52BF34A1A00729579 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829F42BF34A1A00729579 /* RootViewController.swift */; };
 		71B829F72BF34A2800729579 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B829F62BF34A2800729579 /* Root.storyboard */; };
 		71B829FB2BF3850A00729579 /* TransactionsDetailListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829FA2BF3850A00729579 /* TransactionsDetailListViewModel.swift */; };
+		71B829FF2BF4899200729579 /* TransactionDetailSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B829FE2BF4899200729579 /* TransactionDetailSectionModel.swift */; };
 		8021132229D81CFF0061E89A /* UIViewController+Biometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021132129D81CFF0061E89A /* UIViewController+Biometric.swift */; };
 		8021132529D81D2F0061E89A /* BiometricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021132429D81D2F0061E89A /* BiometricManager.swift */; };
 		804714EF29D8089F00B0E30F /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804714EE29D8089F00B0E30F /* String+Helper.swift */; };
@@ -121,6 +125,9 @@
 		38289BFEA7A50EA97916F002 /* Pods-Model.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Model.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Model/Pods-Model.debug.xcconfig"; sourceTree = "<group>"; };
 		40C6608BE3357626E64EBC76 /* Pods-Model.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Model.staging.xcconfig"; path = "Pods/Target Support Files/Pods-Model/Pods-Model.staging.xcconfig"; sourceTree = "<group>"; };
 		5EB24D852DCDE1EE24D817B0 /* Pods-Blueverse.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blueverse.staging.xcconfig"; path = "Pods/Target Support Files/Pods-Blueverse/Pods-Blueverse.staging.xcconfig"; sourceTree = "<group>"; };
+		71546FD32BF5E2250095D401 /* WalletHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletHistory.swift; sourceTree = "<group>"; };
+		71546FD52BF5E43C0095D401 /* WalletHistory+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WalletHistory+API.swift"; sourceTree = "<group>"; };
+		71546FD72BF5E4580095D401 /* WalletHistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletHistoryRouter.swift; sourceTree = "<group>"; };
 		7171E2CE2BEE266000374FF3 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
 		7171E2D02BEE266D00374FF3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7171E2D22BEE268700374FF3 /* User+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+API.swift"; sourceTree = "<group>"; };
@@ -135,10 +142,10 @@
 		7173F04D2BF21CEC008A404F /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		7173F04F2BF21CFB008A404F /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		7173F0512BF21D07008A404F /* ViewMachineBalanceListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMachineBalanceListViewModel.swift; sourceTree = "<group>"; };
-		7173F0532BF21D15008A404F /* ViewMachineBalanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMachineBalanceCell.swift; sourceTree = "<group>"; };
-		7173F0552BF21D20008A404F /* ViewMachineBalanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewMachineBalanceCell.xib; sourceTree = "<group>"; };
+		71865E272BF62EFB007BCCE0 /* ViewMachineBalanceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMachineBalanceListCell.swift; sourceTree = "<group>"; };
+		71865E282BF62EFB007BCCE0 /* ViewMachineBalanceListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewMachineBalanceListCell.xib; sourceTree = "<group>"; };
 		71B829E72BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailCollectionViewCell.swift; sourceTree = "<group>"; };
-		71B829E82BF327EE00729579 /* TransactionsDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsDetailCell.xib; sourceTree = "<group>"; };
+		71B829E82BF327EE00729579 /* TransactionsDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		71B829EB2BF3329000729579 /* TransactionsDetailsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailsCellModel.swift; sourceTree = "<group>"; };
 		71B829ED2BF3341400729579 /* TransactionsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailController.swift; sourceTree = "<group>"; };
 		71B829EF2BF3381B00729579 /* TransactionsDetailTableViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailTableViewListCell.swift; sourceTree = "<group>"; };
@@ -146,6 +153,7 @@
 		71B829F42BF34A1A00729579 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		71B829F62BF34A2800729579 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		71B829FA2BF3850A00729579 /* TransactionsDetailListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailListViewModel.swift; sourceTree = "<group>"; };
+		71B829FE2BF4899200729579 /* TransactionDetailSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailSectionModel.swift; sourceTree = "<group>"; };
 		8021132129D81CFF0061E89A /* UIViewController+Biometric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Biometric.swift"; sourceTree = "<group>"; };
 		8021132429D81D2F0061E89A /* BiometricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricManager.swift; sourceTree = "<group>"; };
 		804714EE29D8089F00B0E30F /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
@@ -248,12 +256,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		71546FD22BF5E2060095D401 /* WalletHistory */ = {
+			isa = PBXGroup;
+			children = (
+				71546FD32BF5E2250095D401 /* WalletHistory.swift */,
+			);
+			path = WalletHistory;
+			sourceTree = "<group>";
+		};
 		7171E2CA2BEE242300374FF3 /* APICalls */ = {
 			isa = PBXGroup;
 			children = (
 				7171E2D22BEE268700374FF3 /* User+API.swift */,
 				7171E2D42BEE269A00374FF3 /* Machine+API.swift */,
 				7171E2D62BEE26B300374FF3 /* ModelError.swift */,
+				71546FD52BF5E43C0095D401 /* WalletHistory+API.swift */,
 			);
 			path = APICalls;
 			sourceTree = "<group>";
@@ -261,6 +278,7 @@
 		7171E2CB2BEE256A00374FF3 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				71546FD22BF5E2060095D401 /* WalletHistory */,
 				7171E2CD2BEE263400374FF3 /* Machine */,
 				7171E2CC2BEE263000374FF3 /* User */,
 			);
@@ -326,12 +344,8 @@
 		7173F0482BF21C7E008A404F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7173F0532BF21D15008A404F /* ViewMachineBalanceCell.swift */,
-				7173F0552BF21D20008A404F /* ViewMachineBalanceCell.xib */,
-				71B829E72BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift */,
-				71B829E82BF327EE00729579 /* TransactionsDetailCell.xib */,
-				71B829EF2BF3381B00729579 /* TransactionsDetailTableViewListCell.swift */,
-				71B829F02BF3381B00729579 /* TransactionsDetailTableViewListCell.xib */,
+				71B829FD2BF4892D00729579 /* ViewMachineBalanceCell */,
+				71B829FC2BF4887A00729579 /* TransactionDetailsCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,8 +372,29 @@
 			isa = PBXGroup;
 			children = (
 				71B829FA2BF3850A00729579 /* TransactionsDetailListViewModel.swift */,
+				71B829FE2BF4899200729579 /* TransactionDetailSectionModel.swift */,
 			);
 			path = Transactions;
+			sourceTree = "<group>";
+		};
+		71B829FC2BF4887A00729579 /* TransactionDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				71B829EF2BF3381B00729579 /* TransactionsDetailTableViewListCell.swift */,
+				71B829F02BF3381B00729579 /* TransactionsDetailTableViewListCell.xib */,
+				71B829E72BF327EE00729579 /* TransactionsDetailCollectionViewCell.swift */,
+				71B829E82BF327EE00729579 /* TransactionsDetailCollectionViewCell.xib */,
+			);
+			path = TransactionDetailsCell;
+			sourceTree = "<group>";
+		};
+		71B829FD2BF4892D00729579 /* ViewMachineBalanceCell */ = {
+			isa = PBXGroup;
+			children = (
+				71865E272BF62EFB007BCCE0 /* ViewMachineBalanceListCell.swift */,
+				71865E282BF62EFB007BCCE0 /* ViewMachineBalanceListCell.xib */,
+			);
+			path = ViewMachineBalanceCell;
 			sourceTree = "<group>";
 		};
 		71DE30AC2BEE565B004D9168 /* UI */ = {
@@ -443,6 +478,7 @@
 				809FD064244ACC6C008515AC /* ModelRouter.swift */,
 				7171E2D82BEE27C300374FF3 /* UserRouter.swift */,
 				7171E2DA2BEE27D600374FF3 /* MachineRouter.swift */,
+				71546FD72BF5E4580095D401 /* WalletHistoryRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -780,10 +816,10 @@
 				7173F0432BF21BE4008A404F /* Wallet.storyboard in Resources */,
 				71B829F72BF34A2800729579 /* Root.storyboard in Resources */,
 				E33D6E3421BFC21D00A3A174 /* Assets.xcassets in Resources */,
+				71865E2A2BF62EFB007BCCE0 /* ViewMachineBalanceListCell.xib in Resources */,
 				71B829F22BF3381B00729579 /* TransactionsDetailTableViewListCell.xib in Resources */,
 				E33D6E3621BFC21D00A3A174 /* Main.storyboard in Resources */,
-				7173F0562BF21D20008A404F /* ViewMachineBalanceCell.xib in Resources */,
-				71B829EA2BF327EE00729579 /* TransactionsDetailCell.xib in Resources */,
+				71B829EA2BF327EE00729579 /* TransactionsDetailCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,13 +925,13 @@
 				71B829EC2BF3329000729579 /* TransactionsDetailsCellModel.swift in Sources */,
 				E33D6E3921BFC21D00A3A174 /* Storyboards.swift in Sources */,
 				E33D6E3D21BFC21D00A3A174 /* UIReusability.swift in Sources */,
-				7173F0542BF21D15008A404F /* ViewMachineBalanceCell.swift in Sources */,
 				E33D6E3821BFC21D00A3A174 /* ViewController.swift in Sources */,
 				8088676229D82389007C3CC8 /* Date+Helper.swift in Sources */,
 				E33D6E5A21BFC49600A3A174 /* TableViewCell.swift in Sources */,
 				71B829FB2BF3850A00729579 /* TransactionsDetailListViewModel.swift in Sources */,
 				E33D6E0C21BFC08900A3A174 /* Logging.swift in Sources */,
 				8021132529D81D2F0061E89A /* BiometricManager.swift in Sources */,
+				71B829FF2BF4899200729579 /* TransactionDetailSectionModel.swift in Sources */,
 				71B829F12BF3381B00729579 /* TransactionsDetailTableViewListCell.swift in Sources */,
 				7173F04C2BF21CE1008A404F /* ViewMachineBalanceController.swift in Sources */,
 				7173F04A2BF21CA1008A404F /* ViewMachineBalanceCellModel.swift in Sources */,
@@ -912,6 +948,7 @@
 				E33D6E4621BFC21D00A3A174 /* Fonts.swift in Sources */,
 				804714F929D80F3000B0E30F /* OTPTextField.swift in Sources */,
 				E33D6E4821BFC21D00A3A174 /* NavigationItem.swift in Sources */,
+				71865E292BF62EFB007BCCE0 /* ViewMachineBalanceListCell.swift in Sources */,
 				E33D6E3F21BFC21D00A3A174 /* UITextField+Helper.swift in Sources */,
 				E33D6E3C21BFC21D00A3A174 /* NavigationBar.swift in Sources */,
 				E33D6E5521BFC47900A3A174 /* Loader.swift in Sources */,
@@ -943,13 +980,16 @@
 				809FD05E244AB629008515AC /* BaseRouter.swift in Sources */,
 				7171E2D72BEE26B300374FF3 /* ModelError.swift in Sources */,
 				7171E2D32BEE268700374FF3 /* User+API.swift in Sources */,
+				71546FD62BF5E43C0095D401 /* WalletHistory+API.swift in Sources */,
 				809FD057244AB52B008515AC /* AuthHeaders.swift in Sources */,
 				809FD05B244AB5BB008515AC /* BlueverseAPIClient.swift in Sources */,
 				7171E2CF2BEE266000374FF3 /* Machine.swift in Sources */,
 				E33D6E0D21BFC08900A3A174 /* Logging.swift in Sources */,
 				809FD059244AB556008515AC /* ErrorResponse.swift in Sources */,
+				71546FD82BF5E4580095D401 /* WalletHistoryRouter.swift in Sources */,
 				7171E2D12BEE266D00374FF3 /* User.swift in Sources */,
 				7171E2DD2BEE298500374FF3 /* FoxAPIClient.swift in Sources */,
+				71546FD42BF5E2250095D401 /* WalletHistory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

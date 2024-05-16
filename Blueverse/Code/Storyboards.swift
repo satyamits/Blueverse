@@ -12,7 +12,6 @@ import FLUtilities
 
 enum Storyboard: String {
     case main = "Main"
-//    case walletViewController = "WalletViewController"
     case wallet = "Wallet"
     
     var name: String {

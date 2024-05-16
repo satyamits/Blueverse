@@ -22,32 +22,45 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.checkUserStatus()
+//        self.checkUserStatus()
         self.setupObservers()
     }
     
-    func checkUserStatus() {
-        if DataModel.shared.userOnboarded {
-            return
-        }
-        self.loginButton.isHidden = false
-    }
+//    func checkUserStatus() {
+//        if DataModel.shared.userOnboarded {
+//            return navigateToWallet(authToken: authToken)
+//        }
+//        self.loginButton.isHidden = false
+//    }
 
     
     let loginAction = Action {(email: String, password: String, app: String) -> SignalProducer<Bool, ModelError> in
         return User.login(email, password, app)
     }
     
-//    func navigateToWallet() {
-//            let walletVC = WalletViewController()
-//            navigationController?.pushViewController(walletVC, animated: true)
-//        }
+    func navigateToWallet(authToken: String) {
+        let vc = UIStoryboard.init(name: "Wallet", bundle: Bundle.main).instantiateViewController(withIdentifier: "WalletViewController") as? WalletViewController
+        print(authToken)
+        self.navigationController?.pushViewController(vc!, animated: true)
+        }
     
     @IBAction func loginButton(_ sender: UIButton) {
         self.disposable += self.loginAction.apply((self.email,
                                                    self.password,
-                                                   self.app)).start()
-        
+                                                   self.app)).startWithResult { [weak self] result in
+            switch result {
+            case .success:
+                let authToken = DataModel.shared.authToken
+                    if authToken.isEmpty {
+                        print("Auth token not found")
+                        return
+                    }
+                    self?.navigateToWallet(authToken: authToken)
+                    print("Logged in successfully")
+            case .failure(let error):
+                print("Login failed with error: \(error)")
+            }
+        }
     }
     
     func setupObservers() {

@@ -20,6 +20,7 @@ PODS:
   - JSONParsing (0.2.1):
     - AnyErrorKit (~> 0.1.1)
     - SwiftyJSON (~> 4.0)
+  - JWTDecode (3.1.0)
   - Kingfisher (7.11.0)
   - MBProgressHUD (1.2.0)
   - ObjcExceptionBridging (7.1.5):
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - FLLogs (from `https://github.com/Nickelfox/FLLogs.git`, branch `develop`)
   - FLUtilities (from `https://github.com/Nickelfox/FLUtilities.git`)
   - FoxAPIKit (from `https://github.com/Nickelfox/FoxAPIKit.git`, branch `develop`)
+  - JWTDecode (~> 3.1)
   - Kingfisher
   - MBProgressHUD
   - SwiftLint
@@ -47,6 +49,7 @@ SPEC REPOS:
     - Alamofire
     - AppCenter
     - JSONParsing
+    - JWTDecode
     - Kingfisher
     - MBProgressHUD
     - ObjcExceptionBridging
@@ -88,6 +91,7 @@ SPEC CHECKSUMS:
   FLUtilities: b61fc8f05e8b952f803b77b26ca11936502c923d
   FoxAPIKit: 49a6aa35a6326dccdffab5df2f213c6c107cbd7e
   JSONParsing: 042f0e156c69002af7092084f3b9822867270b3d
+  JWTDecode: 3eaab1e06b6f4dcbdd6716aff09ba4c2104ca8b7
   Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   ObjcExceptionBridging: d3d37d62981bb7f252ecb31b62d7e23a96bbfb8a
@@ -95,6 +99,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: 2e787ffa770e4527383e6c7426d61612a6e8cbe1
+PODFILE CHECKSUM: 65507cdb4a84a48f0e01688a7d3726572ac056b8
 
 COCOAPODS: 1.15.2

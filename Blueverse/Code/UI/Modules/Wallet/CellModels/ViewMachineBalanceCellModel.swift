@@ -10,9 +10,12 @@ import Model
 
 
 class ViewMachineBalanceListCellModel {
-    public var machineData: Machine
+    public var machineData: Outlets
     
-    init(machineData: Machine) {
+    init(machineData: Outlets) {
         self.machineData = machineData
+    }
+    var balance: [Machine] {
+        return machineData.machines
     }
 }

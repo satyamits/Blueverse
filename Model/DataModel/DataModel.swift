@@ -25,7 +25,12 @@ public class DataModel {
     public var skippedVersion: String
     
     @UserDefault(UserDefaultConfigKey.authToken, "")
-    public var authToken: String
+    public var authToken: String {
+        didSet {
+            BlueverseAPIClient.shared.authHeaders = AuthHeaders(authorizationToken: authToken)
+        }
+        
+    }
     
 }
 

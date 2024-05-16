@@ -8,13 +8,18 @@
 
 import Foundation
 import UIKit
+import ReactiveSwift
+import Model
 
 protocol ViewMachineBalanceListViewControllerProtocol: AnyObject {
-    
+    func fetchMachines()
+    func fetchWalletHistory()
     func fetchMachineTransactions()
     func numberOfRows(in section: Int) -> Int
     var numberOfSection: Int { get }
     func item(at indexPath: IndexPath) -> Any?
+    func fetchMachineTransaction()
+    
     
 }
 
@@ -26,21 +31,24 @@ class ViewMachineBalanceListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewMachineBalanceText: UILabel!
     
+    var disposable = CompositeDisposable([])
     var navigationStack: [UIViewController] = []
-    
-    
+  
     var viewModel: ViewMachineBalanceListViewControllerProtocol!
     override func viewDidLoad() {
         
     super.viewDidLoad()
         self.viewModel = ViewMachineBalanceListViewModel(view: self)
         self.registerTable()
-        viewModel.fetchMachineTransactions()
+        self.viewModel.fetchMachineTransactions()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backArrowTapped))
         backArrowView.addGestureRecognizer(tapGesture)
+        self.viewModel.fetchWalletHistory()
 
     }
+    
+   
     
     @objc func backArrowTapped() {
         self.navigationController?.popViewController(animated: true)
@@ -89,13 +97,14 @@ extension ViewMachineBalanceListViewController: UITableViewDelegate, UITableView
 
 // MARK: - ViewMachineBalanceListViewModelProtocol
 extension ViewMachineBalanceListViewController: ViewMachineBalanceListViewModelProtocol {
-    
-    func fetchMachineTransactions() {
-        
+    func fetchMachineTransaction() {
     }
-        
+    
+    func fetchMachines() {
+    }
+    
     func reload() {
         self.tableView.reloadData()
     }
-    
 }
+

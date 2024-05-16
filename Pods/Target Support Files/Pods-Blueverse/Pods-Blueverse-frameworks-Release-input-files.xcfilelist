@@ -2,6 +2,7 @@ ${PODS_ROOT}/Target Support Files/Pods-Blueverse/Pods-Blueverse-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AnyErrorKit/AnyErrorKit.framework
 ${BUILT_PRODUCTS_DIR}/FLLogs/FLLogs.framework
 ${BUILT_PRODUCTS_DIR}/FLUtilities/FLUtilities.framework
+${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework

@@ -38,7 +38,7 @@ extension AuthHeaders {
     public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         if let token = self.authorizationToken {
-            urlRequest.setValue("Token \(token)", forHTTPHeaderField: authorizationTokenKey)
+            urlRequest.setValue("\(token)", forHTTPHeaderField: authorizationTokenKey)
         }
         return urlRequest
     }
