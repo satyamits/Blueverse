@@ -8,7 +8,15 @@
 import Foundation
 import Model
 
+class ViewMachineBalanceListCellModel {
+    public var machineData: Machine
+    
+    init(machineData: Machine) {
+        self.machineData = machineData
+    }
+}
 
+/*
 class ViewMachineBalanceListCellModel {
     public var machineData: Outlets
     
@@ -18,4 +26,4 @@ class ViewMachineBalanceListCellModel {
     var balance: [Machine] {
         return machineData.machines
     }
-}
+}*/

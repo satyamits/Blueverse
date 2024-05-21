@@ -15,7 +15,7 @@ public final class Outlets: JSONParseable {
     public var dealerId: String
     public var machines: [Machine]
     
-    init(name: String, address: String, dealerId: String, machines: [Machine]) {
+    public init(name: String, address: String, dealerId: String, machines: [Machine]) {
         self.name = name
         self.address = address
         self.dealerId = dealerId
@@ -41,7 +41,8 @@ public final class Machine: JSONParseable {
     public var blueverseCredit: Double
     public var feedbackFormId: String?
     
-    init(name: String,
+    public init(
+         name: String,
          machineGuid: String,
          status: String,
          isAssigned: Bool,

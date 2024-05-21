@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "24F4A82F-4C43-4E64-B268-C1446D754C5F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Blueverse/Code/UI/Modules/Root/RootViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "setupObservers()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "24F4A82F-4C43-4E64-B268-C1446D754C5F - baf76b2936561147"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.RootViewController.setupObservers() -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Root/RootViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "24F4A82F-4C43-4E64-B268-C1446D754C5F - 22f7a8b94ba88049"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Blueverse.RootViewController.setupObservers() -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Root/RootViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "24F4A82F-4C43-4E64-B268-C1446D754C5F - 22f7a8b94ba8802a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Blueverse.RootViewController.setupObservers() -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Root/RootViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "156">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3AF066B4-5D2B-4AB4-95C2-7B7FF43ED6C1"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -77,8 +14,8 @@
             filePath = "Blueverse/Code/UI/Modules/Wallet/Controllers/WalletViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "WalletViewController"
             landmarkType = "3">
             <Locations>
@@ -194,22 +131,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3B07226D-996F-40FA-8C1A-3532B3352C38"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Blueverse/Code/UI/Modules/Wallet/Controllers/ViewMachineBalanceController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B5F6C93A-836C-41DA-B20B-E23E0F0619CF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -217,8 +138,8 @@
             filePath = "Blueverse/Code/UI/Modules/Wallet/ViewModels/Machine Balance/ViewMachineBalanceListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "setupObservers()"
             landmarkType = "7">
             <Locations>
@@ -258,49 +179,160 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E3F5A446-6AEC-47FC-83F6-334EB3C899CD"
+            uuid = "A5EB9B7C-23FF-4DD4-8C50-32C411CAB958"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Blueverse/Code/UI/Modules/Wallet/Controllers/ViewMachineBalanceController.swift"
+            filePath = "Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "login()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E3F5A446-6AEC-47FC-83F6-334EB3C899CD - 3a529761fb3bb2eb"
-                  shouldBeEnabled = "No"
+                  uuid = "A5EB9B7C-23FF-4DD4-8C50-32C411CAB958 - 5af6798559315b34"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.ViewMachineBalanceListViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  symbolName = "Blueverse.LoginViewModel.loginButton(__C.UIButton) -&gt; ()"
                   moduleName = "Blueverse"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Wallet/Controllers/ViewMachineBalanceController.swift"
+                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "209">
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "E3F5A446-6AEC-47FC-83F6-334EB3C899CD - 3a529761fb3bb2eb"
-                  shouldBeEnabled = "No"
+                  uuid = "A5EB9B7C-23FF-4DD4-8C50-32C411CAB958 - 2e11e272f51270aa"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.ViewMachineBalanceListViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  symbolName = "Blueverse.LoginViewModel.login(__C.UIButton) -&gt; ()"
                   moduleName = "Blueverse"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Wallet/Controllers/ViewMachineBalanceController.swift"
+                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "512">
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "A5EB9B7C-23FF-4DD4-8C50-32C411CAB958 - f764d56a30fa315f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Blueverse.LoginViewModel.login() -&gt; ()"
+                  moduleName = "Blueverse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "45">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "315E35A8-6B14-43C4-A2DF-96923590D1C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Blueverse/Code/UI/Modules/Login/Controllers/LoginPageController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "LoginPageController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "186634EA-A728-458D-9CE2-1185BF2585C5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "login()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "186634EA-A728-458D-9CE2-1185BF2585C5 - 5ac26d562b16ff8c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Bool, ReactiveSwift.ActionError&lt;Model.ModelError&gt;&gt;) -&gt; () in Blueverse.LoginViewModel.login() -&gt; ()"
+                  moduleName = "Blueverse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "186634EA-A728-458D-9CE2-1185BF2585C5 - 5ac26d562b16ffce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Bool, ReactiveSwift.ActionError&lt;Model.ModelError&gt;&gt;) -&gt; () in Blueverse.LoginViewModel.login() -&gt; ()"
+                  moduleName = "Blueverse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "472">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73F06010-FF1D-4CE4-99DB-254B8F2C7372"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Blueverse/Code/UI/Modules/Root/RootViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "loginButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01BFA547-0A00-48F4-B6DE-2AA25227D2C8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Blueverse/Code/UI/Modules/Root/RootViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "navigateToWallet(authToken:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

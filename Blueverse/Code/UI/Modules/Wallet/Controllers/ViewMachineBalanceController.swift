@@ -1,6 +1,6 @@
 //
 //  ViewMachineBalanceController.swift
-//  NewsApp
+//  Blueverse
 //
 //  Created by Satyam Singh on 09/05/24.
 //  Copyright © 2024 Nickelfox. All rights reserved.
@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 import ReactiveSwift
-import Model
 
-protocol ViewMachineBalanceListViewControllerProtocol: AnyObject {
+protocol ViewMachineBalanceListVCProtocol: AnyObject {
     func fetchMachines()
     func fetchWalletHistory()
     func fetchMachineTransactions()
@@ -19,8 +18,6 @@ protocol ViewMachineBalanceListViewControllerProtocol: AnyObject {
     var numberOfSection: Int { get }
     func item(at indexPath: IndexPath) -> Any?
     func fetchMachineTransaction()
-    
-    
 }
 
 class ViewMachineBalanceListViewController: UIViewController {
@@ -34,12 +31,13 @@ class ViewMachineBalanceListViewController: UIViewController {
     var disposable = CompositeDisposable([])
     var navigationStack: [UIViewController] = []
   
-    var viewModel: ViewMachineBalanceListViewControllerProtocol!
+    var viewModel: ViewMachineBalanceListVCProtocol!
+    
     override func viewDidLoad() {
-        
     super.viewDidLoad()
         self.viewModel = ViewMachineBalanceListViewModel(view: self)
-        self.registerTable()
+        self.registerTableView()
+        self.configureTableView()
         self.viewModel.fetchMachineTransactions()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backArrowTapped))
@@ -48,21 +46,25 @@ class ViewMachineBalanceListViewController: UIViewController {
 
     }
     
-   
-    
     @objc func backArrowTapped() {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func registerTable() {
+    func registerTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         tableView.registerCell(ViewMachineBalanceListCell.self)
     }
     
+    func configureTableView() {
+        tableView.layer.cornerRadius = 8
+        tableView.layer.masksToBounds = true
+        
+    }
+    
 }
 
-
+// MARK: UITableViewDelegate, UITableViewDataSource
 extension ViewMachineBalanceListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -97,14 +99,8 @@ extension ViewMachineBalanceListViewController: UITableViewDelegate, UITableView
 
 // MARK: - ViewMachineBalanceListViewModelProtocol
 extension ViewMachineBalanceListViewController: ViewMachineBalanceListViewModelProtocol {
-    func fetchMachineTransaction() {
-    }
-    
-    func fetchMachines() {
-    }
     
     func reload() {
         self.tableView.reloadData()
     }
 }
-

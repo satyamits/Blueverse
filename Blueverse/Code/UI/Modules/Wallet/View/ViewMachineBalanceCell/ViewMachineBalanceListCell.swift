@@ -4,12 +4,11 @@
 //
 //  Created by Satyam Singh on 16/05/24.
 //  Copyright © 2024 Nickelfox. All rights reserved.
-//
 
 import UIKit
 
 class ViewMachineBalanceListCell: TableViewCell {
-
+    
     @IBOutlet weak var memberLabelText: UILabel!
     @IBOutlet weak var memberIconView: UIView!
     @IBOutlet weak var balanceSectionView: UIView!
@@ -35,21 +34,27 @@ class ViewMachineBalanceListCell: TableViewCell {
     @IBOutlet weak var sectionText: UILabel!
     @IBOutlet weak var alertIcon: UIImageView!
     @IBOutlet weak var horizontalDividerView: UIView!
+    @IBOutlet weak var balanceInfoDetailView: UIView!
+    @IBOutlet weak var viewtransactionsView: UIView!
     @IBOutlet weak var balanceTextLabel: UILabel!
     @IBOutlet weak var addMoneyButton: UIButton!
     @IBOutlet weak var viewTransactionButton: UIButton!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     override func configure(_ item: Any?) {
         if let item = item as? ViewMachineBalanceListCellModel {
-            
-            self.balanceText.text = item.machineData.name
+            self.balanceText.text = ("\(item.machineData.walletBalance)")
+            self.creditBalance.text = ("\(item.machineData.blueverseCredit)")
+            self.configureUI()
         }
     }
 
     
-    
+    func configureUI() {
+        viewBalanceCellMainView.layer.cornerRadius = 8
+        viewBalanceCellMainView.layer.masksToBounds = false
+        balanceInfoDetailView.layer.cornerRadius = 8
+        addMoneyButton.layer.cornerRadius = 8
+        memberIconView.layer.cornerRadius = 4
+       
+    }
 }

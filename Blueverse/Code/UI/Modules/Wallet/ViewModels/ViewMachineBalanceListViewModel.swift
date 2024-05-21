@@ -1,10 +1,8 @@
-//
 //  ViewMachineBalanceListViewModel.swift
-//  NewsApp
+//  Blueverse
 //
 //  Created by Satyam Singh on 09/05/24.
 //  Copyright © 2024 Nickelfox. All rights reserved.
-//
 
 import Foundation
 import Model
@@ -13,9 +11,7 @@ import JWTDecode
 
 protocol ViewMachineBalanceListViewModelProtocol: AnyObject {
     func reload()
-    func fetchMachineTransaction()
 }
-
 
 class ViewMachineBalanceListViewModel {
     
@@ -24,7 +20,6 @@ class ViewMachineBalanceListViewModel {
     var walletData: [Outlets] = []
     var balanceData: [WalletHistory] = []
     var dealerId = ""
-    
     
     var sectionModels: [SectionModel] = []
     
@@ -36,8 +31,10 @@ class ViewMachineBalanceListViewModel {
             self.dealerId = userId
         }
         self.setupObservers()
+        self.generateDummyData()
     }
     
+ // MARK: SetupObservers
     func setupObservers() {
         self.disposable += self.fetchMachinesAction.values.observeValues({ [weak self] response in
             self?.walletData = response
@@ -73,14 +70,27 @@ class ViewMachineBalanceListViewModel {
     }
     
     
-    func prepareCellModels() {
+    /*func prepareCellModels() {
         
         let cellModels = self.walletData.map({ViewMachineBalanceListCellModel(machineData: $0)})
         
         self.sectionModels = [SectionModel(header: nil, cellModels: cellModels, footer: nil)]
         self.view?.reload()
         
+    }*/
+    
+// MARK: PrepareCellModels
+    func prepareCellModels() {
+        let cellModels = self.walletData.flatMap { outlet in
+            outlet.machines.map { machine in
+                ViewMachineBalanceListCellModel(machineData: machine)
+            }
+        }
+        
+        self.sectionModels = [SectionModel(header: nil, cellModels: cellModels, footer: nil)]
+//        self.view?.reload()
     }
+
     
     func fetchMachineTransactions() {
         fetchMachinesAction.apply(self.dealerId).start()
@@ -89,10 +99,22 @@ class ViewMachineBalanceListViewModel {
     func fetchWalletHistory() {
         fetchWalletHistoryAction.apply(["dealerId": self.dealerId]).start()
     }
+// MARK: Dummy data
+    
+    func generateDummyData() {
+            let dummyMachines = [
+                Machine(name: "Machine 1", machineGuid: "guid1", status: "active", isAssigned: true, feedbackFormId: "form1", walletbalance: 100.0, blueverseCredit: 50.0),
+                Machine(name: "Machine 2", machineGuid: "guid2", status: "inactive", isAssigned: false, feedbackFormId: "form2", walletbalance: 200.0, blueverseCredit: 75.0)
+            ]
+            
+            let dummyOutlet = Outlets(name: "Outlet 1", address: "Address 1", dealerId: "dealer1", machines: dummyMachines)
+            
+            self.walletData = [dummyOutlet]
+            self.prepareCellModels()
+        }
 }
 
-
-extension ViewMachineBalanceListViewModel: ViewMachineBalanceListViewControllerProtocol {
+extension ViewMachineBalanceListViewModel: ViewMachineBalanceListVCProtocol {
     func fetchMachineTransaction() {
 
     }
@@ -113,7 +135,6 @@ extension ViewMachineBalanceListViewModel: ViewMachineBalanceListViewControllerP
 // MARK: decoding token
 extension ViewMachineBalanceListViewModel {
     
-
     func decode(jwtToken jwt: String) -> [String: Any] {
       let segments = jwt.components(separatedBy: ".")
       return decodeJWTPart(segments[1]) ?? [:]
