@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -65,15 +65,34 @@
                                             <constraint firstItem="5l2-6z-hem" firstAttribute="centerX" secondItem="cPk-S4-vrG" secondAttribute="centerX" id="WDl-W4-R5o"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xik-kA-Qvy">
+                                        <rect key="frame" x="211.66666666666666" y="16" width="106.33333333333334" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemRedColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logoutButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="peM-8x-Jog"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="cPk-S4-vrG" secondAttribute="trailing" constant="20" id="163-tJ-BJX"/>
+                                    <constraint firstItem="xik-kA-Qvy" firstAttribute="top" secondItem="idW-5o-MEc" secondAttribute="top" constant="16" id="3Pn-0l-ahF"/>
                                     <constraint firstAttribute="height" constant="72" id="5m8-aO-w5i"/>
+                                    <constraint firstItem="xik-kA-Qvy" firstAttribute="leading" secondItem="f0g-RX-cf0" secondAttribute="trailing" constant="16" id="7ng-Kv-EOt"/>
+                                    <constraint firstAttribute="bottom" secondItem="xik-kA-Qvy" secondAttribute="bottom" constant="16" id="CJ5-kb-Cw6"/>
                                     <constraint firstItem="S91-dm-T4b" firstAttribute="leading" secondItem="idW-5o-MEc" secondAttribute="leading" constant="20" id="FrA-Kt-wXN"/>
+                                    <constraint firstItem="cPk-S4-vrG" firstAttribute="leading" secondItem="xik-kA-Qvy" secondAttribute="trailing" constant="15" id="IE7-fX-rTP"/>
                                     <constraint firstItem="cPk-S4-vrG" firstAttribute="top" secondItem="S91-dm-T4b" secondAttribute="top" id="U1R-ll-8eX"/>
                                     <constraint firstItem="S91-dm-T4b" firstAttribute="top" secondItem="idW-5o-MEc" secondAttribute="top" constant="16" id="UPm-bE-QS4"/>
-                                    <constraint firstItem="cPk-S4-vrG" firstAttribute="centerY" secondItem="S91-dm-T4b" secondAttribute="centerY" id="ZV4-w4-GfC"/>
                                     <constraint firstItem="S91-dm-T4b" firstAttribute="centerY" secondItem="f0g-RX-cf0" secondAttribute="centerY" id="jlg-x3-WR7"/>
                                     <constraint firstItem="f0g-RX-cf0" firstAttribute="leading" secondItem="S91-dm-T4b" secondAttribute="trailing" constant="12" id="w3P-HU-FK2"/>
                                     <constraint firstAttribute="bottom" secondItem="S91-dm-T4b" secondAttribute="bottom" constant="16" id="xCW-kS-JhV"/>
@@ -525,6 +544,7 @@ Credits Balance</string>
                         <outlet property="filterIconView" destination="E5J-gh-sFe" id="6Fg-0n-eGj"/>
                         <outlet property="leftAlignIconView" destination="S91-dm-T4b" id="ICR-7c-liC"/>
                         <outlet property="leftAlignImage" destination="ggW-7J-Tzw" id="boh-VM-q5d"/>
+                        <outlet property="logoutButton" destination="xik-kA-Qvy" id="vPP-BR-1R1"/>
                         <outlet property="manageWalletHeaderView" destination="idW-5o-MEc" id="4w0-j2-bPN"/>
                         <outlet property="manageWalletText" destination="f0g-RX-cf0" id="1Hn-mg-tNU"/>
                         <outlet property="searchIconView" destination="C6N-uf-Mwt" id="DF2-hy-AUr"/>
@@ -654,7 +674,7 @@ Credits Balance</string>
         <image name="Group 1000004935" width="22" height="23"/>
         <image name="Vector 57" width="17" height="17"/>
         <image name="align-left" width="20" height="20"/>
-        <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="bell" catalog="system" width="32" height="32"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
@@ -665,6 +685,9 @@ Credits Balance</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

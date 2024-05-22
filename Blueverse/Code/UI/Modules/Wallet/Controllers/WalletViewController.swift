@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 import ReactiveSwift
+import Model
 
 class WalletViewController: UIViewController {
     
   
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var selectServiceView: UIView!
     @IBOutlet weak var selectMachineView: UIView!
     @IBOutlet weak var filterDataView: UIView!
@@ -55,5 +57,23 @@ class WalletViewController: UIViewController {
         transactionsHistoryView.layer.cornerRadius = 8
         selectMachineView.layer.cornerRadius = 8
         selectServiceView.layer.cornerRadius = 8
+    }
+    
+    
+    @IBAction func logoutButtonTapped(_ sender: UIButton) {
+        self.performLogout()
+        print("Logged out")
+    }
+    
+    func performLogout() {
+        DataModel.shared.clearUserData()
+        print(DataModel.shared.authToken)
+        navigateToLogin()
+        
+    }
+    
+    func navigateToLogin() {
+        let vc = UIStoryboard.init(name: "Login", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginPageController") as? LoginPageController
+           self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

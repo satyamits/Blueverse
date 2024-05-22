@@ -14,10 +14,14 @@ protocol LoginPageControllerProtocol: AnyObject {
     var email: String { get set }
     var password: String { get set }
     func login()
+    func checkUserStatus()
+    
 }
+
 
 class LoginPageController: UIViewController {
     
+    weak var activeField: UITextField?
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var hidePasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -43,24 +47,62 @@ class LoginPageController: UIViewController {
     
     var viewModel: LoginPageControllerProtocol!
     
+    
     var isChecked: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initTextFields()
         self.viewModel = LoginViewModel(self)
-//        self.tickButtonConfig()
+        //        self.tickButtonConfig()
         self.hidePasswordButtonConfig()
-        self.updateLoginButtonState()
+        //        self.updateLoginButtonState()
         loginButton.setTitleColor(.white, for: .normal)
+        self.configureLoginUI()
+        self.setupDismissKeyboardGesture()
+        self.viewModel.checkUserStatus()
+        
+
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginPageController.keyboardDidShow),
+                    name: UIResponder.keyboardDidShowNotification, object: nil)
+                NotificationCenter.default.addObserver(self, selector: #selector(LoginPageController.keyboardWillBeHidden),
+                    name: UIResponder.keyboardWillHideNotification, object: nil)
+//        self.showAlert(title: title, message: Sti)
         
     }
     
-    // MARK: TextFieldInitializer
+    //MARK: Handle KeyBoard
     
+    deinit {
+            NotificationCenter.default.removeObserver(self)
+        }
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            activeField = textField
+        }
+        
+        @objc func keyboardDidShow(notification: Notification) {
+            let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+            guard let activeField = activeField, let keyboardHeight = keyboardSize?.height else { return }
+
+            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
+            let activeRect = activeField.convert(activeField.bounds, to: scrollView)
+            scrollView.scrollRectToVisible(activeRect, animated: true)
+        }
+        
+        @objc func keyboardWillBeHidden(notification: Notification) {
+            let contentInsets = UIEdgeInsets.zero
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
+        }
+    
+    // MARK: TextFieldInitializer
     func initTextFields() {
         self.emailIdTextField.delegate = self
         self.passwordTextField.delegate = self
     }
+    
     // MARK: NavigationInstantisation
     func navigateToWallet(authToken: String) {
         let vc = UIStoryboard.init(name: "Wallet", bundle: Bundle.main).instantiateViewController(withIdentifier: "WalletViewController") as? WalletViewController
@@ -74,12 +116,8 @@ class LoginPageController: UIViewController {
         viewModel.login()
     }
     
-//    // MARK: CheckButtonConfiguration
-//    func tickButtonConfig() {
-//        self.tickButton.setImage(UIImage(named: "blankcheck"), for: .normal)
-//        self.tickButton.addTarget(self, action: #selector(tickButtonTapped), for: .touchUpInside)
-//        self.loginButton.setTitleColor(UIColor.white, for: .normal)
-//    }
+    // MARK: CheckButtonConfiguration
+    
     
     @objc func tickButtonTapped() {
         if tickButton.currentImage == UIImage(named: "blankcheck") {
@@ -96,8 +134,9 @@ class LoginPageController: UIViewController {
         isChecked.toggle()
         tickButton.setImage(UIImage(named: isChecked ? "check" : "blankcheck" ), for: .normal)
         loginButton.backgroundColor = UIColor.init(hex: isChecked ?  "#1F59AF" : "#B3BBC7" )
-       
+        
     }
+    
     
     func hidePasswordButtonConfig() {
         self.hidePasswordButton.setTitle("", for: .normal)
@@ -111,6 +150,15 @@ class LoginPageController: UIViewController {
         hidePasswordButton.setImage(UIImage(named: imageName), for: .normal)
     }
     
+    func setupDismissKeyboardGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyBoard() {
+        
+        view.endEditing(true)
+    }
 }
 
 // MARK: UITextFieldDelegate
@@ -125,22 +173,58 @@ extension LoginPageController: UITextFieldDelegate {
             viewModel?.password = textField.text ?? ""
         }
     }
-    
-    func updateLoginButtonState() {
-        let isEmailEmpty = emailIdTextField.text?.isEmpty ?? true
-        let isPasswordEmpty = passwordTextField.text?.isEmpty ?? true
-        let isTickButtonUnchecked = tickButton.currentImage == UIImage(named: "blankcheck")
-        
-        loginButton.isEnabled = !isEmailEmpty && !isPasswordEmpty && !isTickButtonUnchecked
-        
-        loginButton.backgroundColor = loginButton.isEnabled ? UIColor.init(hex: "#1F59AF") : UIColor.init(hex: "#B3BBC7")
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        activeField = nil
+        if textField == emailIdTextField {
+            if let email = emailIdTextField.text, email.isValidEmail {
+                emailIdTextField.borderColor = UIColor(hex: "#C9D8EF")
+            } else {
+                emailIdTextField.borderColor = UIColor(hex: "#FF4049")
+            }
+        }
     }
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            if textField == emailIdTextField {
+                textField.resignFirstResponder()
+                passwordTextField.becomeFirstResponder()
+            } else if textField == passwordTextField {
+                textField.resignFirstResponder()
+                loginButton.becomeFirstResponder()
+            }
+            return true
+        }
+        
+        func updateLoginButtonState() {
+            let isEmailEmpty = emailIdTextField.text?.isEmpty ?? true
+            let isPasswordEmpty = passwordTextField.text?.isEmpty ?? true
+            let isTickButtonUnchecked = tickButton.currentImage == UIImage(named: "blankcheck")
+            
+            loginButton.isEnabled = !isEmailEmpty && !isPasswordEmpty && !isTickButtonUnchecked
+            
+            loginButton.backgroundColor = loginButton.isEnabled ? UIColor.init(hex: "#1F59AF") : UIColor.init(hex: "#B3BBC7")
+            loginButton.setTitleColor(UIColor(hex: "#FFFFFF"), for: .normal)
+        }
+        
+        @objc func textFieldDidChange(_ textField: UITextField) {
+            updateLoginButtonState()
+        }
+        
+        func configureLoginUI() {
+            self.loginFormatView.layer.cornerRadius = 12
+            self.loginButton.layer.cornerRadius = 8
+        }
+}
+
+extension LoginPageController {
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        updateLoginButtonState()
-    }
-    
-    
+    func showAlert(title: String, message: String) {
+          let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+          let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+          alertController.addAction(okAction)
+          present(alertController, animated: true, completion: nil)
+        }
 }
 
 

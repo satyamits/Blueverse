@@ -14,102 +14,10 @@
             filePath = "Blueverse/Code/UI/Modules/Wallet/Controllers/WalletViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "WalletViewController"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "3AF066B4-5D2B-4AB4-95C2-7B7FF43ED6C1 - 40c1b2e122735214"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.WalletViewController.creditIconView.getter : Swift.Optional&lt;__C.UIView&gt;"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Wallet/Controllers/WalletViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "3AF066B4-5D2B-4AB4-95C2-7B7FF43ED6C1 - 306fe7b559eeca60"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.WalletViewController.creditIconView.setter : Swift.Optional&lt;__C.UIView&gt;"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Wallet/Controllers/WalletViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "3AF066B4-5D2B-4AB4-95C2-7B7FF43ED6C1 - 5c729d7fd3c2a74c"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.WalletViewController.creditIconView.modify : Swift.Optional&lt;__C.UIView&gt;"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Wallet/Controllers/WalletViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "3AF066B4-5D2B-4AB4-95C2-7B7FF43ED6C1 - 2bacd21919492918"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.WalletViewController.creditIconView.modify : Swift.Optional&lt;__C.UIView&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/%3Ccompiler-generated%3E"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  uuid = "3AF066B4-5D2B-4AB4-95C2-7B7FF43ED6C1 - a630b46b83b9e619"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.WalletViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Blueverse.WalletViewController"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Wallet/Controllers/WalletViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "516">
-               </Location>
-               <Location
-                  uuid = "3AF066B4-5D2B-4AB4-95C2-7B7FF43ED6C1 - cd4c7a3bce25c1e"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.WalletViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Blueverse.WalletViewController&gt;"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Wallet/Controllers/WalletViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "492">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,101 +50,6 @@
             endingLineNumber = "44"
             landmarkName = "setupObservers()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B5F6C93A-836C-41DA-B20B-E23E0F0619CF - fa51f53b3016eff3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;Model.Outlets&gt;) -&gt; () in Blueverse.ViewMachineBalanceListViewModel.setupObservers() -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Wallet/ViewModels/Machine%20Balance/ViewMachineBalanceListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "343">
-               </Location>
-               <Location
-                  uuid = "B5F6C93A-836C-41DA-B20B-E23E0F0619CF - fa51f53b3016eff3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;Model.Outlets&gt;) -&gt; () in Blueverse.ViewMachineBalanceListViewModel.setupObservers() -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Wallet/ViewModels/Machine%20Balance/ViewMachineBalanceListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "559">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A5EB9B7C-23FF-4DD4-8C50-32C411CAB958"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "login()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A5EB9B7C-23FF-4DD4-8C50-32C411CAB958 - 5af6798559315b34"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.LoginViewModel.loginButton(__C.UIButton) -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "A5EB9B7C-23FF-4DD4-8C50-32C411CAB958 - 2e11e272f51270aa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.LoginViewModel.login(__C.UIButton) -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "A5EB9B7C-23FF-4DD4-8C50-32C411CAB958 - f764d56a30fa315f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Blueverse.LoginViewModel.login() -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "45">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -249,58 +62,10 @@
             filePath = "Blueverse/Code/UI/Modules/Login/Controllers/LoginPageController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "LoginPageController"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "186634EA-A728-458D-9CE2-1185BF2585C5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "login()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "186634EA-A728-458D-9CE2-1185BF2585C5 - 5ac26d562b16ff8c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Bool, ReactiveSwift.ActionError&lt;Model.ModelError&gt;&gt;) -&gt; () in Blueverse.LoginViewModel.login() -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "472">
-               </Location>
-               <Location
-                  uuid = "186634EA-A728-458D-9CE2-1185BF2585C5 - 5ac26d562b16ffce"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Bool, ReactiveSwift.ActionError&lt;Model.ModelError&gt;&gt;) -&gt; () in Blueverse.LoginViewModel.login() -&gt; ()"
-                  moduleName = "Blueverse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nickelfox/Documents/Repos/Blueverse/Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116"
-                  offsetFromSymbolStart = "472">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -332,6 +97,38 @@
             startingLineNumber = "106"
             endingLineNumber = "106"
             landmarkName = "navigateToWallet(authToken:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B0AE1F7-023F-4F45-B6E3-C14B396AB63B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "checkUserStatus()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A0BBB48-E167-42E8-AE63-7576091F579D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Blueverse/Code/UI/Modules/Login/ViewModels/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "checkUserStatus()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -32,6 +32,12 @@ public class DataModel {
         
     }
     
+    public func clearUserData() {
+        self.userOnboarded = false
+        self.skippedVersion = ""
+        self.authToken = ""
+    }
+    
 }
 
 @propertyWrapper

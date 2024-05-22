@@ -15,6 +15,15 @@ extension String {
                    .filter { !$0.isEmpty }
                    .joined(separator: " ")
     }
+    
+    public var isValidEmail: Bool {
+        if isEmpty {
+            let emailRegx =  "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$"
+            let emailTest = NSPredicate(format: "SELF MATCHES % @", emailRegx)
+            return emailTest.evaluate(with: self)
+        }
+        return false
+    }
 }
 
 extension String {

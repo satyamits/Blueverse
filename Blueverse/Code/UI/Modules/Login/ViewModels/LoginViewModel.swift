@@ -14,6 +14,7 @@ protocol LoginViewModelProtocol: AnyObject {
     var email: String { get }
     var password: String { get }
     func navigateToWallet(authToken: String)
+//    func showAlert(title: String, message: String)
 }
 
 class LoginViewModel {
@@ -60,9 +61,21 @@ class LoginViewModel {
                 print("Logged in successfully")
             case .failure(let error):
                 print("Login failed with error: \(error)")
+//                showAlert(title: "Password Mismatch", message: "The passwords you entered do not match. Please try again.")
+//                return
             }
         }
     }
+    
+    func checkUserStatus() {
+        
+        let userOnboarded = DataModel.shared.userOnboarded
+        let authToken = DataModel.shared.authToken
+        if userOnboarded && !authToken.isEmpty {
+            self.view?.navigateToWallet(authToken: authToken)
+        }
+    }
+    
 }
 
 
