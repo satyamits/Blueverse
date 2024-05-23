@@ -12,17 +12,15 @@ import UIKit
 extension String {
     func condensingWhitespace() -> String {
         return self.components(separatedBy: .whitespacesAndNewlines)
-                   .filter { !$0.isEmpty }
-                   .joined(separator: " ")
+            .filter { !$0.isEmpty }
+            .joined(separator: " ")
     }
     
     public var isValidEmail: Bool {
-        if isEmpty {
-            let emailRegx =  "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$"
-            let emailTest = NSPredicate(format: "SELF MATCHES % @", emailRegx)
-            return emailTest.evaluate(with: self)
-        }
-        return false
+        // A basic email validation regex
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Z0-9a-z.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: self)
     }
 }
 
@@ -34,10 +32,10 @@ extension String {
                                             options: .usesLineFragmentOrigin,
                                             attributes: [NSAttributedString.Key.font: font],
                                             context: nil)
-
+        
         return ceil(boundingBox.height)
     }
-
+    
     func width(withConstrainedHeight height: CGFloat,
                font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: .greatestFiniteMagnitude,
@@ -46,7 +44,7 @@ extension String {
                                             options: .usesLineFragmentOrigin,
                                             attributes: [NSAttributedString.Key.font:
                                                             font], context: nil)
-
+        
         return ceil(boundingBox.width)
     }
 }
@@ -124,13 +122,13 @@ extension String {
         let idx2 = index(idx1, offsetBy: 1)
         return String(self[idx1..<idx2])
     }
-
+    
     subscript (range: Range<Int>) -> String {
         let start = index(startIndex, offsetBy: range.lowerBound)
         let end = index(startIndex, offsetBy: range.upperBound)
         return String(self[start ..< end])
     }
-
+    
     subscript (range: CountableClosedRange<Int>) -> String {
         let startIndex =  self.index(self.startIndex, offsetBy: range.lowerBound)
         let endIndex = self.index(startIndex, offsetBy: range.upperBound - range.lowerBound)

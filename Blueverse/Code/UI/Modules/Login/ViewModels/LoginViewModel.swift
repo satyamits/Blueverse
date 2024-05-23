@@ -14,7 +14,7 @@ protocol LoginViewModelProtocol: AnyObject {
     var email: String { get }
     var password: String { get }
     func navigateToWallet(authToken: String)
-//    func showAlert(title: String, message: String)
+    func showAlert(title: String, message: String)
 }
 
 class LoginViewModel {
@@ -35,18 +35,16 @@ class LoginViewModel {
     }
     
     func setupObservers() {
-    self.disposable += self.loginAction.values.observeValues({ [weak self] response in
-    print(response)
-    })
-    self.disposable += self.loginAction.errors.observeValues({ [weak self] (error) in
-    print(error)
-    })
+        self.disposable += self.loginAction.values.observeValues({ [weak self] response in
+            print(response)
+        })
+        self.disposable += self.loginAction.errors.observeValues({ [weak self] (error) in
+            print(error)
+        })
     }
-    
-    
-    
-    func login() {
 
+    func login() {
+        
         self.disposable += self.loginAction.apply((self.email,
                                                    self.password,
                                                    self.app)).startWithResult { [weak self] result in
@@ -61,8 +59,7 @@ class LoginViewModel {
                 print("Logged in successfully")
             case .failure(let error):
                 print("Login failed with error: \(error)")
-//                showAlert(title: "Password Mismatch", message: "The passwords you entered do not match. Please try again.")
-//                return
+                self?.view?.showAlert(title: "Login Failed", message: "Incorrect email or password. Please try again.")
             }
         }
     }
@@ -78,8 +75,10 @@ class LoginViewModel {
     
 }
 
-
 extension LoginViewModel: LoginPageControllerProtocol {
+    func showAlert(title: String, message: String) {
+    }
+    
     func navigateToWallet(authToken: String) {
         print("navigateToWallet called.")
     }

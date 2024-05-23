@@ -103,8 +103,20 @@ class ViewMachineBalanceListViewModel {
     
     func generateDummyData() {
             let dummyMachines = [
-                Machine(name: "Machine 1", machineGuid: "guid1", status: "active", isAssigned: true, feedbackFormId: "form1", walletbalance: 100.0, blueverseCredit: 50.0),
-                Machine(name: "Machine 2", machineGuid: "guid2", status: "inactive", isAssigned: false, feedbackFormId: "form2", walletbalance: 200.0, blueverseCredit: 75.0)
+                Machine(name: "Machine 1", 
+                        machineGuid: "guid1",
+                        status: "active",
+                        isAssigned: true,
+                        feedbackFormId: "form1",
+                        walletbalance: 100.0,
+                        blueverseCredit: 50.0),
+                Machine(name: "Machine 2", 
+                        machineGuid: "guid2", 
+                        status: "inactive",
+                        isAssigned: false,
+                        feedbackFormId: "form2",
+                        walletbalance: 200.0,
+                        blueverseCredit: 75.0)
             ]
             
             let dummyOutlet = Outlets(name: "Outlet 1", address: "Address 1", dealerId: "dealer1", machines: dummyMachines)

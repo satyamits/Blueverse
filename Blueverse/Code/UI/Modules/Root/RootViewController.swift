@@ -161,4 +161,3 @@ extension RootViewController {
         loginButton.isEnabled = true
     }
 }
-

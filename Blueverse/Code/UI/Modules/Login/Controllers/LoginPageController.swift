@@ -15,9 +15,9 @@ protocol LoginPageControllerProtocol: AnyObject {
     var password: String { get set }
     func login()
     func checkUserStatus()
+    func showAlert(title: String, message: String)
     
 }
-
 
 class LoginPageController: UIViewController {
     
@@ -47,63 +47,52 @@ class LoginPageController: UIViewController {
     
     var viewModel: LoginPageControllerProtocol!
     
-    
     var isChecked: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initTextFields()
         self.viewModel = LoginViewModel(self)
-        //        self.tickButtonConfig()
         self.hidePasswordButtonConfig()
-        //        self.updateLoginButtonState()
         loginButton.setTitleColor(.white, for: .normal)
         self.configureLoginUI()
         self.setupDismissKeyboardGesture()
         self.viewModel.checkUserStatus()
         
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(LoginPageController.keyboardDidShow),
-                    name: UIResponder.keyboardDidShowNotification, object: nil)
-                NotificationCenter.default.addObserver(self, selector: #selector(LoginPageController.keyboardWillBeHidden),
-                    name: UIResponder.keyboardWillHideNotification, object: nil)
-//        self.showAlert(title: title, message: Sti)
-        
+                                               name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginPageController.keyboardWillBeHidden),
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    //MARK: Handle KeyBoard
-    
+    // MARK: Handle KeyBoard
     deinit {
-            NotificationCenter.default.removeObserver(self)
-        }
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-            activeField = textField
-        }
-        
-        @objc func keyboardDidShow(notification: Notification) {
-            let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
-            guard let activeField = activeField, let keyboardHeight = keyboardSize?.height else { return }
-
-            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
-            scrollView.contentInset = contentInsets
-            scrollView.scrollIndicatorInsets = contentInsets
-            let activeRect = activeField.convert(activeField.bounds, to: scrollView)
-            scrollView.scrollRectToVisible(activeRect, animated: true)
-        }
-        
-        @objc func keyboardWillBeHidden(notification: Notification) {
-            let contentInsets = UIEdgeInsets.zero
-            scrollView.contentInset = contentInsets
-            scrollView.scrollIndicatorInsets = contentInsets
-        }
-    
-    // MARK: TextFieldInitializer
-    func initTextFields() {
-        self.emailIdTextField.delegate = self
-        self.passwordTextField.delegate = self
+        NotificationCenter.default.removeObserver(self)
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeField = textField
     }
     
-    // MARK: NavigationInstantisation
+    @objc func keyboardDidShow(notification: Notification) {
+        let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+        guard let activeField = activeField, let keyboardHeight = keyboardSize?.height else { return }
+        
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+        let activeRect = activeField.convert(activeField.bounds, to: scrollView)
+        scrollView.scrollRectToVisible(activeRect, animated: true)
+    }
+    
+    @objc func keyboardWillBeHidden(notification: Notification) {
+        let contentInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
+    
+// MARK: NavigationInstantisation
     func navigateToWallet(authToken: String) {
         let vc = UIStoryboard.init(name: "Wallet", bundle: Bundle.main).instantiateViewController(withIdentifier: "WalletViewController") as? WalletViewController
         print(authToken)
@@ -116,9 +105,7 @@ class LoginPageController: UIViewController {
         viewModel.login()
     }
     
-    // MARK: CheckButtonConfiguration
-    
-    
+// MARK: CheckButtonConfiguration
     @objc func tickButtonTapped() {
         if tickButton.currentImage == UIImage(named: "blankcheck") {
             tickButton.setImage(UIImage(named: "check"), for: .normal)
@@ -134,9 +121,9 @@ class LoginPageController: UIViewController {
         isChecked.toggle()
         tickButton.setImage(UIImage(named: isChecked ? "check" : "blankcheck" ), for: .normal)
         loginButton.backgroundColor = UIColor.init(hex: isChecked ?  "#1F59AF" : "#B3BBC7" )
+        updateLoginButtonState()
         
     }
-    
     
     func hidePasswordButtonConfig() {
         self.hidePasswordButton.setTitle("", for: .normal)
@@ -159,6 +146,11 @@ class LoginPageController: UIViewController {
         
         view.endEditing(true)
     }
+    // MARK: TextFieldInitializer
+    func initTextFields() {
+        self.emailIdTextField.delegate = self
+        self.passwordTextField.delegate = self
+    }
 }
 
 // MARK: UITextFieldDelegate
@@ -168,65 +160,71 @@ extension LoginPageController: UITextFieldDelegate {
     // MARK: SettingTheTextToEmailAndPassword
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField == emailIdTextField {
-            viewModel?.email = (textField.text) ?? ""
+            viewModel?.email = textField.text ?? ""
+            validateEmail()
         } else if textField == passwordTextField {
             viewModel?.password = textField.text ?? ""
         }
+        updateLoginButtonState()
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         activeField = nil
         if textField == emailIdTextField {
-            if let email = emailIdTextField.text, email.isValidEmail {
-                emailIdTextField.borderColor = UIColor(hex: "#C9D8EF")
-            } else {
-                emailIdTextField.borderColor = UIColor(hex: "#FF4049")
-            }
+            validateEmail()
+        }
+        updateLoginButtonState()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField == emailIdTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            loginButton.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        updateLoginButtonState()
+    }
+    
+    // MARK: UpdateLoginButtonState
+    func updateLoginButtonState() {
+        loginButton.setTitleColor(UIColor(hex: "#FFFFFF"), for: .normal)
+        let isEmailEmpty = emailIdTextField.text?.isEmpty ?? true
+        let isPasswordEmpty = passwordTextField.text?.isEmpty ?? true
+        let isTickButtonChecked = tickButton.currentImage == UIImage(named: "check")
+        loginButton.isEnabled = !isEmailEmpty && !isPasswordEmpty && isTickButtonChecked
+        loginButton.backgroundColor = loginButton.isEnabled ? UIColor(hex: "#1F59AF") : UIColor(hex: "#B3BBC7")
+        
+    }
+    
+    func validateEmail() {
+        if let email = emailIdTextField.text, email.isValidEmail {
+            emailIdTextField.borderColor = UIColor(hex: "#C9D8EF")
+        } else {
+            emailIdTextField.borderColor = UIColor(hex: "#FF4049")
         }
     }
-        
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            if textField == emailIdTextField {
-                textField.resignFirstResponder()
-                passwordTextField.becomeFirstResponder()
-            } else if textField == passwordTextField {
-                textField.resignFirstResponder()
-                loginButton.becomeFirstResponder()
-            }
-            return true
-        }
-        
-        func updateLoginButtonState() {
-            let isEmailEmpty = emailIdTextField.text?.isEmpty ?? true
-            let isPasswordEmpty = passwordTextField.text?.isEmpty ?? true
-            let isTickButtonUnchecked = tickButton.currentImage == UIImage(named: "blankcheck")
-            
-            loginButton.isEnabled = !isEmailEmpty && !isPasswordEmpty && !isTickButtonUnchecked
-            
-            loginButton.backgroundColor = loginButton.isEnabled ? UIColor.init(hex: "#1F59AF") : UIColor.init(hex: "#B3BBC7")
-            loginButton.setTitleColor(UIColor(hex: "#FFFFFF"), for: .normal)
-        }
-        
-        @objc func textFieldDidChange(_ textField: UITextField) {
-            updateLoginButtonState()
-        }
-        
-        func configureLoginUI() {
-            self.loginFormatView.layer.cornerRadius = 12
-            self.loginButton.layer.cornerRadius = 8
-        }
+    
+    func configureLoginUI() {
+        self.loginFormatView.layer.cornerRadius = 12
+        self.loginButton.layer.cornerRadius = 8
+    }
 }
 
 extension LoginPageController {
     
     func showAlert(title: String, message: String) {
-          let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-          let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-          alertController.addAction(okAction)
-          present(alertController, animated: true, completion: nil)
-        }
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
 }
-
 
 // MARK: LoginViewModelProtocol
 extension LoginPageController: LoginViewModelProtocol {
@@ -239,5 +237,4 @@ extension LoginPageController: LoginViewModelProtocol {
         return self.viewModel.password
         
     }
-    
 }
